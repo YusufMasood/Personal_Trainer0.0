@@ -1,4 +1,4 @@
-package com.example.myapplication.Ui
+package com.example.myapplication.ui
 
 
 import androidx.compose.foundation.background
@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.dp
 import com.example.myapplication.Ui_Content.VideoBackground
 
 @Composable
-fun IntroVideo(){
+fun IntroScreen( onGetStarted: () -> Unit ){
 
     Box( modifier = Modifier.fillMaxSize()
     ) {
@@ -44,9 +44,9 @@ fun IntroVideo(){
 
         //Elevated button for next page
 
-        ElevatedButton( onClick = {},
+        ElevatedButton( onClick = onGetStarted,
             modifier = Modifier.align(Alignment.BottomCenter)
-                .padding(16.dp)
+                .padding(32.dp)
         ){
             Text("Let's  Get Started")
         }
@@ -62,5 +62,5 @@ fun IntroVideo(){
 @Preview
 @Composable
 fun show(){
-    IntroVideo()
+    //IntroScreen()
 }
