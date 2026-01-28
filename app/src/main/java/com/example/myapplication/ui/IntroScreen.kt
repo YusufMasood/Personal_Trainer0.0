@@ -59,8 +59,3 @@ fun IntroScreen( onGetStarted: () -> Unit ){
 
 
 
-@Preview
-@Composable
-fun show(){
-    //IntroScreen()
-}
