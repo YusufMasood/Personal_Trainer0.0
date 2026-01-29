@@ -48,7 +48,7 @@ fun IntroScreen( onGetStarted: () -> Unit ){
             modifier = Modifier.align(Alignment.BottomCenter)
                 .padding(32.dp)
         ){
-            Text("Let's  Get Started")
+            Text("Let's  Get Started --->")
         }
 
 
