@@ -1,4 +1,4 @@
-package com.example.myapplication.Ui_Content
+package com.yusuf.personaltrainer.Ui_Content
 
 import android.net.Uri
 import androidx.compose.foundation.layout.fillMaxSize
@@ -13,7 +13,7 @@ import androidx.media3.common.Player
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.ui.AspectRatioFrameLayout
 import androidx.media3.ui.PlayerView
-import com.example.myapplication.R   // ✅ IMPORTANT
+import com.yusuf.personaltrainer.R   // ✅ IMPORTANT
 
 
 @Composable

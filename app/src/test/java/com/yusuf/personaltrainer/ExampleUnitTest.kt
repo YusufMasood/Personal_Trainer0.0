@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.yusuf.personaltrainer
 
 import org.junit.Test
 

@@ -1,4 +1,5 @@
-package com.example.myapplication.ui
+package com.yusuf.personaltrainer.ui
+
 
 
 import android.widget.Toast
@@ -10,7 +11,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -19,7 +19,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.ElevatedButton
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
@@ -33,16 +32,20 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.myapplication.R
+import com.yusuf.personaltrainer.R
+
 
 @Composable
-fun LoginPage( onGoHome: () -> Unit){
+fun loginScreen(onGoHome: () -> Unit){
+
+    val context = LocalContext.current
 
     var phoneNumber by remember { mutableStateOf("") }
 
@@ -101,10 +104,16 @@ fun LoginPage( onGoHome: () -> Unit){
             ),
             singleLine = true,
             colors = OutlinedTextFieldDefaults.colors(
+
                 focusedTextColor = Color.Black,
                 unfocusedTextColor = Color.Black,
+
+                focusedLabelColor = Color.Black,
+                unfocusedLabelColor = Color.Black,
+
                 focusedBorderColor = Color.Black,
                 unfocusedBorderColor = Color.Gray,
+
                 cursorColor = Color.Black
             )
         )
@@ -127,7 +136,10 @@ fun LoginPage( onGoHome: () -> Unit){
                     )
                 )
                 .clickable {
-
+                    if(phoneNumber.isEmpty() || phoneNumber.length != 10){
+                        Toast.makeText(context,"Enter valid phone number", Toast.LENGTH_SHORT).show()
+                        return@clickable
+                    }
                 },
             contentAlignment = Alignment.Center
         ) {
@@ -180,6 +192,6 @@ fun LoginPage( onGoHome: () -> Unit){
 @Composable
 fun show1(){
 
-    LoginPage{}
+    loginScreen{}
 
 }

@@ -1,4 +1,4 @@
-package com.example.myapplication.ui
+package com.yusuf.personaltrainer.ui
 
 import android.app.Activity
 import android.widget.Toast

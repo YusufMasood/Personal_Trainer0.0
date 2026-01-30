@@ -1,4 +1,4 @@
-package com.example.myapplication.ui
+package com.yusuf.personaltrainer.ui
 
 
 import androidx.compose.foundation.background
@@ -12,12 +12,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.myapplication.Ui_Content.VideoBackground
+import com.yusuf.personaltrainer.Ui_Content.VideoBackground
 
 @Composable
-fun IntroScreen( onGetStarted: () -> Unit ){
+fun introScreen(onGetStarted: () -> Unit ){
 
     Box( modifier = Modifier.fillMaxSize()
     ) {
