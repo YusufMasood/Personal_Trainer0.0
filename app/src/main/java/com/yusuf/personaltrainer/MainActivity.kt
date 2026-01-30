@@ -13,6 +13,8 @@ import com.yusuf.personaltrainer.ui.loginScreen
 import com.yusuf.personaltrainer.ui.homeScreen
 
 
+
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

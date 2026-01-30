@@ -40,12 +40,67 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.yusuf.personaltrainer.R
+import android.app.Activity
+import com.google.firebase.FirebaseException
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.PhoneAuthCredential
+import com.google.firebase.auth.PhoneAuthOptions
+import com.google.firebase.auth.PhoneAuthProvider
+import java.util.concurrent.TimeUnit
+
+
 
 
 @Composable
 fun loginScreen(onGoHome: () -> Unit){
 
     val context = LocalContext.current
+    val auth = FirebaseAuth.getInstance()
+
+
+    //***********************************************************  OTP Logic**************************
+
+    var verificationId by remember { mutableStateOf("") }
+
+    val callbacks = remember {
+        object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+
+            override fun onVerificationCompleted(
+                credential: PhoneAuthCredential
+            ) {
+                // Auto verification
+            }
+
+            override fun onVerificationFailed(e: FirebaseException) {
+                Toast.makeText(
+                    context,
+                    "OTP failed: ${e.message}",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+
+            override fun onCodeSent(
+                verId: String,
+                token: PhoneAuthProvider.ForceResendingToken
+            ) {
+                verificationId = verId
+                Toast.makeText(
+                    context,
+                    "OTP sent successfully",
+                    Toast.LENGTH_SHORT
+                ).show()
+
+            }
+        }
+    }
+
+    //***********************************************************************************************
+
+
+
+
+
+
 
     var phoneNumber by remember { mutableStateOf("") }
 
@@ -136,10 +191,19 @@ fun loginScreen(onGoHome: () -> Unit){
                     )
                 )
                 .clickable {
-                    if(phoneNumber.isEmpty() || phoneNumber.length != 10){
+                    if(phoneNumber.length != 10){
                         Toast.makeText(context,"Enter valid phone number", Toast.LENGTH_SHORT).show()
                         return@clickable
                     }
+
+                    val options = PhoneAuthOptions.newBuilder(auth)
+                        .setPhoneNumber("+91$phoneNumber")
+                        .setTimeout(60L, TimeUnit.SECONDS)
+                        .setActivity(context as Activity)
+                        .setCallbacks(callbacks)
+                        .build()
+
+                    PhoneAuthProvider.verifyPhoneNumber(options)
                 },
             contentAlignment = Alignment.Center
         ) {
