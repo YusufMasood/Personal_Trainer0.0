@@ -69,6 +69,8 @@ fun loginScreen(onGoHome: () -> Unit){
                 credential: PhoneAuthCredential
             ) {
                 // Auto verification
+                auth.signInWithCredential(credential)
+
             }
 
             override fun onVerificationFailed(e: FirebaseException) {
@@ -89,8 +91,8 @@ fun loginScreen(onGoHome: () -> Unit){
                     "OTP sent successfully",
                     Toast.LENGTH_SHORT
                 ).show()
-
             }
+
         }
     }
 
