@@ -52,7 +52,7 @@ import java.util.concurrent.TimeUnit
 
 
 @Composable
-fun loginScreen(onGoHome: () -> Unit){
+fun loginScreen(onGoHome: () -> Unit = {} , sendOtp: (String) -> Unit = {}){
 
     val context = LocalContext.current
     val auth = FirebaseAuth.getInstance()
@@ -206,11 +206,12 @@ fun loginScreen(onGoHome: () -> Unit){
                         .build()
 
                     PhoneAuthProvider.verifyPhoneNumber(options)
+                    sendOtp(phoneNumber)
                 },
             contentAlignment = Alignment.Center
         ) {
             Text(
-                text = "Verify OTP",
+                text = "Send OTP",
                 color = Color.White,
                 fontSize = 19.sp,
                 fontWeight = FontWeight.Bold
@@ -258,6 +259,6 @@ fun loginScreen(onGoHome: () -> Unit){
 @Composable
 fun show1(){
 
-    loginScreen{}
+    loginScreen()
 
 }

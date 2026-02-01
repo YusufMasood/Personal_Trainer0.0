@@ -10,12 +10,14 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
+import androidx.media3.common.util.UnstableApi
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.ui.AspectRatioFrameLayout
 import androidx.media3.ui.PlayerView
 import com.yusuf.personaltrainer.R   // ✅ IMPORTANT
 
 
+@UnstableApi
 @Composable
 fun VideoBackground() {
     val context = LocalContext.current
@@ -37,6 +39,8 @@ fun VideoBackground() {
 
     DisposableEffect(Unit) {
         onDispose {
+            exoPlayer.stop()
+            exoPlayer.clearMediaItems()
             exoPlayer.release()
         }
     }
