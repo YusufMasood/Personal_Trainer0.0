@@ -62,11 +62,17 @@ class MainActivity : ComponentActivity() {
                         )
                     ) { backStackEntry ->
 
-                        val phone =
-                            backStackEntry.arguments?.getString("phone") ?: ""
+                        val phone = backStackEntry.arguments?.getString("phone") ?: ""
 
                         otpScreen(phoneNumber = phone)
                     }
+
+
+
+
+
+
+
                 }
 
 
