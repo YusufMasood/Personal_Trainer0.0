@@ -96,6 +96,7 @@ fun loginScreen(onGoHome: () -> Unit = {} , sendOtp: (String) -> Unit = {}){
         }
     }
 
+
     //***********************************************************************************************
 
 
@@ -108,6 +109,7 @@ fun loginScreen(onGoHome: () -> Unit = {} , sendOtp: (String) -> Unit = {}){
 
     Column( modifier = Modifier
         .fillMaxSize()
+        .background(color = Color.White)
         , horizontalAlignment = Alignment.CenterHorizontally
 
     ){
