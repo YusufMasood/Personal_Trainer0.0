@@ -218,5 +218,5 @@ fun otpScreen(phoneNumber : String) {
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun show2(){
-    otpScreen("5678907")
+    otpScreen("675678907")
 }

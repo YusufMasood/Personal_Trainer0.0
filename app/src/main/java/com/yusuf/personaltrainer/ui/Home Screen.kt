@@ -17,8 +17,15 @@ import kotlinx.coroutines.delay
 fun homeScreen(){
 
 
+    Text("Home Screen")
 
-    //App closing handler
+
+
+
+
+
+
+    //App closing handler*******************************
 
 
     val context = LocalContext.current
@@ -48,11 +55,5 @@ fun homeScreen(){
         }
     }
 
-
-
-
-
-
-
-    Text("Home Screen")
+    //*********************************************************
 }
