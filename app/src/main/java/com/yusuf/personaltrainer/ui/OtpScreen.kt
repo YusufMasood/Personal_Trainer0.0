@@ -19,6 +19,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -206,12 +207,14 @@ fun otpScreen(phoneNumber : String, verificationId: String, onLoginSuccess: () -
                         listOf(Color(0xFF5B86E5), Color(0xFF2CD5DB))
                     )
                 )
-                .clickable {
+                .clickable (enabled = !isVerifying){
 
                     if (enteredOtp.length != 6) {
                         Toast.makeText(context, "Enter valid OTP", Toast.LENGTH_SHORT).show()
                         return@clickable
                     }
+
+                    isVerifying = true
 
                     val credential = PhoneAuthProvider.getCredential(
                         verificationId,
@@ -221,7 +224,7 @@ fun otpScreen(phoneNumber : String, verificationId: String, onLoginSuccess: () -
 
                     auth.signInWithCredential(credential)
                         .addOnCompleteListener { task ->
-                            isVerifying = true
+                            isVerifying = false
                             if (task.isSuccessful) {
                                 Toast.makeText(context, "Login successful", Toast.LENGTH_SHORT).show()
                                 onLoginSuccess()
@@ -229,7 +232,7 @@ fun otpScreen(phoneNumber : String, verificationId: String, onLoginSuccess: () -
                                 Toast.makeText(context, "Invalid OTP", Toast.LENGTH_SHORT).show()
                             }
 
-                            isVerifying = false
+
 
                         }
 
@@ -237,12 +240,21 @@ fun otpScreen(phoneNumber : String, verificationId: String, onLoginSuccess: () -
                 },
             contentAlignment = Alignment.Center
         ) {
-            Text(
-                text = "Verify OTP",
-                color = Color.White,
-                fontSize = 19.sp,
-                fontWeight = FontWeight.Bold
-            )
+            if (isVerifying) {
+                CircularProgressIndicator(
+                    color = Color.White,
+                    strokeWidth = 2.dp,
+                    modifier = Modifier.size(24.dp)
+                )
+            } else {
+                Text(
+                    text = "Verify OTP",
+                    color = Color.White,
+                    fontSize = 19.sp,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+
 
 
         }

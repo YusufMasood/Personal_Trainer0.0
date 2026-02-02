@@ -76,6 +76,7 @@ fun loginScreen(onGoHome: () -> Unit = {} , sendOtp: (String, String) -> Unit ){
             ) {
                 // Auto verification
                 auth.signInWithCredential(credential)
+                    .addOnSuccessListener { onGoHome()}
 
             }
 
@@ -227,12 +228,20 @@ fun loginScreen(onGoHome: () -> Unit = {} , sendOtp: (String, String) -> Unit ){
                 },
             contentAlignment = Alignment.Center
         ) {
-            Text(
-                text = "Send OTP",
-                color = Color.White,
-                fontSize = 19.sp,
-                fontWeight = FontWeight.Bold
-            )
+            if (isSendingOtp) {
+                CircularProgressIndicator(
+                    color = Color.White,
+                    strokeWidth = 2.dp,
+                    modifier = Modifier.size(24.dp)
+                )
+            } else {
+                Text(
+                    text = "Send OTP",
+                    color = Color.White,
+                    fontSize = 19.sp,
+                    fontWeight = FontWeight.Bold
+                )
+            }
         }
 
         Spacer(modifier = Modifier.height(85.dp))
