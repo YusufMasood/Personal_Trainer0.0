@@ -47,27 +47,40 @@ class MainActivity : ComponentActivity() {
                                     popUpTo("login") { inclusive = true }
                                 }
                             },
-                            sendOtp = { phoneNumber ->
-                                navController.navigate("otp/$phoneNumber")
+                            sendOtp = { phoneNumber, verId ->
+                                navController.navigate("otp/$phoneNumber /$verId")
                             }
                         )
                     }
 
                     composable(
-                        route = "otp/{phone}",
+                        route = "otp/{phone}/{verId}",
                         arguments = listOf(
-                            navArgument("phone") {
-                                type = NavType.StringType
-                            }
+                            navArgument("phone") { type = NavType.StringType },
+                            navArgument("verId") { type = NavType.StringType }
                         )
+
                     ) { backStackEntry ->
 
                         val phone = backStackEntry.arguments?.getString("phone") ?: ""
+                        val verificationId = backStackEntry.arguments?.getString("verId") ?: ""
 
-                        otpScreen(phoneNumber = phone)
+                        otpScreen(
+                            phoneNumber = phone,
+                            verificationId = verificationId,
+                            onLoginSuccess = {
+                                navController.navigate("home") {
+                                    popUpTo("login") { inclusive = true }
+                                }
+                            }
+                        )
+
                     }
 
 
+                    composable("home") {
+                        homeScreen()
+                    }
 
 
 

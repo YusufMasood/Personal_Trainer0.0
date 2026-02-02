@@ -1,5 +1,6 @@
 package com.yusuf.personaltrainer.ui
 
+import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -34,6 +35,7 @@ import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
@@ -41,17 +43,28 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.PhoneAuthProvider
 import com.yusuf.personaltrainer.R
 import kotlinx.coroutines.delay
 
 
 
 @Composable
-fun otpScreen(phoneNumber : String) {
+fun otpScreen(phoneNumber : String, verificationId: String, onLoginSuccess: () -> Unit) {
+
+
+    val context = LocalContext.current
+    val auth = FirebaseAuth.getInstance()
+
+    var isVerifying by remember { mutableStateOf(false) }
+
+
 
 
     //OTP boxes
     val otp = remember { mutableStateListOf("", "", "", "", "", "") }
+    val enteredOtp = otp.joinToString("")
     val focusRequesters = List(6) { FocusRequester() }
 
 
@@ -195,6 +208,31 @@ fun otpScreen(phoneNumber : String) {
                 )
                 .clickable {
 
+                    if (enteredOtp.length != 6) {
+                        Toast.makeText(context, "Enter valid OTP", Toast.LENGTH_SHORT).show()
+                        return@clickable
+                    }
+
+                    val credential = PhoneAuthProvider.getCredential(
+                        verificationId,
+                        enteredOtp
+                    )
+
+
+                    auth.signInWithCredential(credential)
+                        .addOnCompleteListener { task ->
+                            isVerifying = true
+                            if (task.isSuccessful) {
+                                Toast.makeText(context, "Login successful", Toast.LENGTH_SHORT).show()
+                                onLoginSuccess()
+                            } else {
+                                Toast.makeText(context, "Invalid OTP", Toast.LENGTH_SHORT).show()
+                            }
+
+                            isVerifying = false
+
+                        }
+
 
                 },
             contentAlignment = Alignment.Center
@@ -218,5 +256,5 @@ fun otpScreen(phoneNumber : String) {
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun show2(){
-    otpScreen("675678907")
+    otpScreen("675678907", "345678",{})
 }

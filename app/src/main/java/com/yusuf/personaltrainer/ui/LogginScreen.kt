@@ -41,6 +41,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.yusuf.personaltrainer.R
 import android.app.Activity
+import androidx.compose.material3.CircularProgressIndicator
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
@@ -52,10 +53,15 @@ import java.util.concurrent.TimeUnit
 
 
 @Composable
-fun loginScreen(onGoHome: () -> Unit = {} , sendOtp: (String) -> Unit = {}){
+fun loginScreen(onGoHome: () -> Unit = {} , sendOtp: (String, String) -> Unit ){
 
     val context = LocalContext.current
     val auth = FirebaseAuth.getInstance()
+
+    var phoneNumber by remember { mutableStateOf("") }
+
+    var isSendingOtp by remember { mutableStateOf(false) }
+
 
 
     //***********************************************************  OTP Logic**************************
@@ -79,6 +85,9 @@ fun loginScreen(onGoHome: () -> Unit = {} , sendOtp: (String) -> Unit = {}){
                     "OTP failed: ${e.message}",
                     Toast.LENGTH_LONG
                 ).show()
+
+                isSendingOtp = false
+
             }
 
             override fun onCodeSent(
@@ -91,6 +100,11 @@ fun loginScreen(onGoHome: () -> Unit = {} , sendOtp: (String) -> Unit = {}){
                     "OTP sent successfully",
                     Toast.LENGTH_SHORT
                 ).show()
+
+                isSendingOtp = false
+
+
+                sendOtp(phoneNumber, verId)
             }
 
         }
@@ -104,8 +118,6 @@ fun loginScreen(onGoHome: () -> Unit = {} , sendOtp: (String) -> Unit = {}){
 
 
 
-
-    var phoneNumber by remember { mutableStateOf("") }
 
     Column( modifier = Modifier
         .fillMaxSize()
@@ -194,11 +206,13 @@ fun loginScreen(onGoHome: () -> Unit = {} , sendOtp: (String) -> Unit = {}){
                         listOf(Color(0xFF5B86E5), Color(0xFF2CD5DB))
                     )
                 )
-                .clickable {
+                .clickable(enabled = !isSendingOtp) {
                     if(phoneNumber.length != 10){
                         Toast.makeText(context,"Enter valid phone number", Toast.LENGTH_SHORT).show()
                         return@clickable
                     }
+
+                    isSendingOtp = true
 
                     val options = PhoneAuthOptions.newBuilder(auth)
                         .setPhoneNumber("+91$phoneNumber")
@@ -208,7 +222,8 @@ fun loginScreen(onGoHome: () -> Unit = {} , sendOtp: (String) -> Unit = {}){
                         .build()
 
                     PhoneAuthProvider.verifyPhoneNumber(options)
-                    sendOtp(phoneNumber)
+
+                    //  sendOtp(phoneNumber, verificationId)
                 },
             contentAlignment = Alignment.Center
         ) {
@@ -249,6 +264,9 @@ fun loginScreen(onGoHome: () -> Unit = {} , sendOtp: (String) -> Unit = {}){
                 Text("Twitter")
             }
         }
+
+
+
         Button( onClick = onGoHome) { Text("Home Page") }
 
 
@@ -261,6 +279,6 @@ fun loginScreen(onGoHome: () -> Unit = {} , sendOtp: (String) -> Unit = {}){
 @Composable
 fun show1(){
 
-    loginScreen()
+ //   loginScreen()
 
 }
