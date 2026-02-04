@@ -48,6 +48,6 @@ fun HomeContent(
             )
         }
 
-        // rest of home UI
+
     }
 }

@@ -1,5 +1,6 @@
 package com.yusuf.personaltrainer.Ui_Content
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -23,9 +24,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.yusuf.personaltrainer.R
 
 @Composable
 fun AppDrawer(
@@ -38,7 +41,7 @@ fun AppDrawer(
             .background(Color.White)
     ) {
 
-        // 🔴 Header
+
         Box(
             modifier = Modifier
                 .fillMaxWidth()
@@ -61,12 +64,12 @@ fun AppDrawer(
         }
 
         DrawerItem("Profile", Icons.Default.Person, onItemClick)
-//        DrawerItem("Workout", Icons.Default.FitnessCenter, onItemClick)
-//        DrawerItem("Pro Tips", Icons.Default.Lightbulb, onItemClick)
-//        DrawerItem("Nutritional Value", Icons.Default.Restaurant, onItemClick)
-//        DrawerItem("Settings", Icons.Default.Settings, onItemClick)
-//        DrawerItem("Help & Support", Icons.Default.Help, onItemClick)
-//        DrawerItem("Logout", Icons.Default.Logout, onItemClick)
+        DrawerItem("Workout", R.drawable.gym_icon, onItemClick)
+        DrawerItem("Pro Tips", R.drawable.tips, onItemClick)
+        DrawerItem("Nutritional Value", R.drawable.nutrion, onItemClick)
+        DrawerItem("Settings", Icons.Default.Settings, onItemClick)
+        DrawerItem("Help & Support", R.drawable.help, onItemClick)
+        DrawerItem("Logout", R.drawable.logout, onItemClick)
 
         Spacer(modifier = Modifier.weight(1f))
 
@@ -83,7 +86,7 @@ fun AppDrawer(
 @Composable
 fun DrawerItem(
     title: String,
-    icon: ImageVector,
+    icon: Any,
     onClick: () -> Unit
 ) {
     Row(
@@ -94,7 +97,21 @@ fun DrawerItem(
         verticalAlignment = Alignment.CenterVertically
     ) {
 
-        Icon(icon, contentDescription = title)
+        when (icon) {
+            is ImageVector -> {
+                Icon(
+                    imageVector = icon,
+                    contentDescription = title
+                )
+            }
+            is Int -> {
+                Image(
+                    painter = painterResource(id = icon),
+                    contentDescription = title,
+                    modifier = Modifier.size(24.dp)
+                )
+            }
+        }
 
         Spacer(modifier = Modifier.width(16.dp))
 
