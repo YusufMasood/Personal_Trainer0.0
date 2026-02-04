@@ -1,4 +1,4 @@
-package com.yusuf.personaltrainer.ui
+package com.yusuf.personaltrainer.ui.screens.auth
 
 
 

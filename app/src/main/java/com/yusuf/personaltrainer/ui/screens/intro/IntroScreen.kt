@@ -1,4 +1,4 @@
-package com.yusuf.personaltrainer.ui
+package com.yusuf.personaltrainer.ui.screens.intro
 
 
 import androidx.compose.foundation.background
@@ -13,7 +13,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.yusuf.personaltrainer.Ui_Content.VideoBackground
 
 @Composable
 fun introScreen(onGetStarted: () -> Unit ){

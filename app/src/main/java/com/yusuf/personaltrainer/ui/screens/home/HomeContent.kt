@@ -1,4 +1,4 @@
-package com.yusuf.personaltrainer.Ui_Content
+package com.yusuf.personaltrainer.ui.screens.home
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row

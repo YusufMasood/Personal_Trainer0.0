@@ -1,5 +1,6 @@
-package com.yusuf.personaltrainer.Ui_Content
+package com.yusuf.personaltrainer.ui.screens.intro
 
+import android.graphics.Color
 import android.net.Uri
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
@@ -52,7 +53,7 @@ fun VideoBackground() {
                 player = exoPlayer
                 useController = false
                 resizeMode = AspectRatioFrameLayout.RESIZE_MODE_ZOOM
-                setShutterBackgroundColor(android.graphics.Color.TRANSPARENT)
+                setShutterBackgroundColor(Color.TRANSPARENT)
             }
         }
     )

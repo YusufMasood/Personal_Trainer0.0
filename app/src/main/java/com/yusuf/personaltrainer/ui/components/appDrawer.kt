@@ -1,4 +1,4 @@
-package com.yusuf.personaltrainer.Ui_Content
+package com.yusuf.personaltrainer.ui.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
