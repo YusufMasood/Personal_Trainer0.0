@@ -22,7 +22,43 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 @Composable
-fun HomeScreen() {
+fun homeScreen() {
+
+
+
+    //App closing handler*******************************
+
+
+    val context = LocalContext.current
+    var backPressedOnce by remember { mutableStateOf(false) }
+
+    // Reset after 2 seconds
+    LaunchedEffect(backPressedOnce) {
+        if (backPressedOnce) {
+            delay(2000)
+            backPressedOnce = false
+        }
+    }
+
+    BackHandler {
+        if (backPressedOnce) {
+            // Exit app
+            (context as? Activity)?.finish()
+        } else {
+            backPressedOnce = true
+            Toast.makeText(
+                context,
+                "Press back again to exit",
+                Toast.LENGTH_SHORT
+            ).show()
+
+
+        }
+    }
+
+    //*********************************************************
+
+
 
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val scope = rememberCoroutineScope()
@@ -54,6 +90,6 @@ fun HomeScreen() {
 @Composable
 fun show3(){
 
-    HomeScreen()
+    homeScreen()
 
 }
