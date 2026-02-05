@@ -15,6 +15,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -68,7 +69,7 @@ fun BottomNavBar(
             // Scan button (NO TEXT)
             Box(
                 modifier = Modifier
-                    .size(60.dp)
+                    .size(70.dp)
                     .clip(CircleShape)
                     .background(Color(0xFF00E5FF))
                     .clickable { onItemSelected(2) },
@@ -78,7 +79,7 @@ fun BottomNavBar(
                     imageVector = Icons.Default.CameraAlt,
                     contentDescription = "Scan",
                     tint = Color.Black,
-                    modifier = Modifier.size(30.dp)
+                    modifier = Modifier.size(40.dp)
                 )
             }
 
@@ -127,4 +128,10 @@ fun BottomNavItem(
             color = color
         )
     }
+}
+
+@Preview
+@Composable
+fun show4(){
+    BottomNavBar(2,{})
 }
