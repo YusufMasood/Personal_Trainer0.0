@@ -112,7 +112,7 @@ fun BottomNavItem(
 
     Column(
         modifier = Modifier
-            .clickable { onClick() },
+            .clickable { onClick()  },
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Icon(

@@ -8,7 +8,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.yusuf.personaltrainer.ui.screens.auth.loginScreen
 import com.yusuf.personaltrainer.ui.screens.auth.otpScreen
-import com.yusuf.personaltrainer.ui.screens.home.homeScreen
+import com.yusuf.personaltrainer.ui.screens.home.HomeScreen
 import com.yusuf.personaltrainer.ui.screens.intro.introScreen
 
 @Composable
@@ -66,7 +66,7 @@ fun AppNavGraph(
         }
 
         composable(Routes.HOME) {
-            homeScreen()
+            HomeScreen()
         }
     }
 }

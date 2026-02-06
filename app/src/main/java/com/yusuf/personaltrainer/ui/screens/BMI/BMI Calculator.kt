@@ -1,4 +1,4 @@
-package com.yusuf.personaltrainer.ui.screens.Tools
+package com.yusuf.personaltrainer.ui.screens.BMI
 
 
 import android.widget.Toast
