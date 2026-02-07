@@ -1,11 +1,16 @@
 package com.yusuf.personaltrainer.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
+import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import com.yusuf.personaltrainer.data.local.AppDatabase
+import com.yusuf.personaltrainer.ui.screens.auth.PersonalInfoScreen
+import com.yusuf.personaltrainer.ui.screens.auth.PersonalInfoViewModel
 import com.yusuf.personaltrainer.ui.screens.auth.loginScreen
 import com.yusuf.personaltrainer.ui.screens.auth.otpScreen
 import com.yusuf.personaltrainer.ui.screens.home.HomeScreen
@@ -58,8 +63,36 @@ fun AppNavGraph(
                 phoneNumber = phone,
                 verificationId = verificationId,
                 onLoginSuccess = {
-                    navController.navigate(Routes.HOME) {
+                    navController.navigate(Routes.PERSONAL_INFO) {
                         popUpTo(Routes.LOGIN) { inclusive = true }
+                    }
+                }
+            )
+        }
+
+        composable(Routes.HOME) {
+            HomeScreen()
+        }
+
+
+        //  PERSONAL INFO SCREEN (REAL DB USE)
+        composable(Routes.PERSONAL_INFO) {
+
+            val context = LocalContext.current
+
+            val db = remember {
+                AppDatabase.getInstance(context)
+            }
+
+            val viewModel = remember {
+                PersonalInfoViewModel(db.userProfileDao())
+            }
+
+            PersonalInfoScreen(
+                viewModel = viewModel,
+                onContinue = {
+                    navController.navigate(Routes.HOME) {
+                        popUpTo(Routes.PERSONAL_INFO) { inclusive = true }
                     }
                 }
             )
@@ -70,3 +103,4 @@ fun AppNavGraph(
         }
     }
 }
+

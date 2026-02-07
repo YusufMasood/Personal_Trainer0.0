@@ -48,6 +48,7 @@ import androidx.compose.ui.unit.sp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthProvider
 import com.yusuf.personaltrainer.R
+import com.yusuf.personaltrainer.data.local.AppDatabase
 import kotlinx.coroutines.delay
 
 
@@ -60,6 +61,9 @@ fun otpScreen(phoneNumber : String, verificationId: String, onLoginSuccess: () -
     val auth = FirebaseAuth.getInstance()
 
     var isVerifying by remember { mutableStateOf(false) }
+
+    val db = remember { AppDatabase.getInstance(context) }
+    val viewModel = remember { PersonalInfoViewModel(db.userProfileDao()) }
 
 
 
@@ -227,15 +231,23 @@ fun otpScreen(phoneNumber : String, verificationId: String, onLoginSuccess: () -
                         .addOnCompleteListener { task ->
                             isVerifying = false
                             if (task.isSuccessful) {
-                                Toast.makeText(context, "Login successful", Toast.LENGTH_SHORT).show()
-                                onLoginSuccess()
+
+                                viewModel.savePhoneNumber(phoneNumber,
+                                    onSuccess = {
+                                        Toast.makeText(
+                                            context,
+                                            "Login successful",
+                                            Toast.LENGTH_SHORT
+                                        ).show()
+                                        onLoginSuccess()
+                                    }
+                                )
+
                             } else {
                                 Toast.makeText(context, "Invalid OTP", Toast.LENGTH_SHORT).show()
                             }
-
-
-
                         }
+
 
 
                 },

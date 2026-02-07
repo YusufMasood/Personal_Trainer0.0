@@ -12,6 +12,7 @@ object Routes {
 
     const val BMR = "bmr"
 
+    const val PERSONAL_INFO = "personal_info"
     fun otpRoute(phone: String, verId: String): String {
         return "otp/$phone/$verId"
     }
