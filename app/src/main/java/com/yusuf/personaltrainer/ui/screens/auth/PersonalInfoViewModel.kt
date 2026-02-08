@@ -5,6 +5,9 @@ import androidx.lifecycle.viewModelScope
 import com.yusuf.personaltrainer.data.local.dao.UserProfileDao
 import com.yusuf.personaltrainer.data.local.entity.UserProfileEntity
 import kotlinx.coroutines.launch
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.launch
+
 
 
 class PersonalInfoViewModel(
