@@ -1,9 +1,11 @@
 package com.yusuf.personaltrainer.ui.screens.home
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -23,30 +25,20 @@ import androidx.compose.ui.unit.sp
 fun HomeContent(
     onProfileClick: () -> Unit
 ) {
-    Column {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
+    Column(modifier = Modifier.padding(15.dp),
+        horizontalAlignment = Alignment.CenterHorizontally) {
+
+       Spacer(modifier = Modifier.heightIn(18.dp))
 
             IconButton(onClick = onProfileClick) {
                 Icon(
                     imageVector = Icons.Default.AccountCircle,
                     contentDescription = "Profile",
-                    modifier = Modifier.size(36.dp)
+                    modifier = Modifier.size(56.dp)
+                        .clickable(onClick = onProfileClick)
                 )
             }
 
-            Spacer(modifier = Modifier.width(8.dp))
-
-            Text(
-                text = "Home",
-                fontSize = 20.sp,
-                fontWeight = FontWeight.Bold
-            )
-        }
 
 
     }

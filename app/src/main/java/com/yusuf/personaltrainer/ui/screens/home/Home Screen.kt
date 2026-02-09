@@ -1,6 +1,7 @@
 package com.yusuf.personaltrainer.ui.screens.home
 
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.DrawerValue
@@ -10,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -19,6 +21,8 @@ import com.yusuf.personaltrainer.ui.components.AppDrawer
 import com.yusuf.personaltrainer.ui.components.BottomNavBar
 import com.yusuf.personaltrainer.ui.screens.Tools.ToolsScreen
 import kotlinx.coroutines.launch
+
+
 @Composable
 fun HomeScreen() {
 
@@ -27,7 +31,13 @@ fun HomeScreen() {
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val scope = rememberCoroutineScope()
 
-    Box(modifier = Modifier.fillMaxSize()) {
+
+
+    Box(modifier = Modifier.fillMaxSize()
+        .background(Color(0xFFF2F2F2))
+    ) {
+
+
 
         // 🟦 DRAWER WRAPS THE CONTENT
         ModalNavigationDrawer(
@@ -40,6 +50,13 @@ fun HomeScreen() {
                 )
             }
         ) {
+
+
+
+            //lazy row with images and text
+
+            HomeBannerSlider(items = homeBannerItems)
+
 
             // 🟩 HOME NAVIGATION
             NavHost(
@@ -72,6 +89,9 @@ fun HomeScreen() {
                 }
             }
         }
+
+
+
 
         // 🟨 BOTTOM NAV (FLOATING ABOVE EVERYTHING)
         Box(modifier = Modifier.align(Alignment.BottomCenter)) {
@@ -116,7 +136,7 @@ fun currentIndex(navController: androidx.navigation.NavHostController): Int {
 
 @Preview
 @Composable
-fun show3(){
+fun Show3(){
 
     HomeScreen()
 

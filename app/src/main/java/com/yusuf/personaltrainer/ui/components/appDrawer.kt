@@ -34,6 +34,7 @@ import com.yusuf.personaltrainer.R
 fun AppDrawer(
     onItemClick: () -> Unit
 ) {
+
     Column(
         modifier = Modifier
             .fillMaxHeight()
