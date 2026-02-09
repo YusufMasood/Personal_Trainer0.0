@@ -31,7 +31,7 @@ data class HomeBannerItem(
 )
 
 val homeBannerItems = listOf(
-    HomeBannerItem(R.drawable.salman,"Salman Khan"),
+    HomeBannerItem(R.drawable.salman,"Salman Khan🔥"),
     HomeBannerItem(R.drawable.chris, "Chris Bumstead"),
     HomeBannerItem(R.drawable.kaigreen, "Kai Greene"),
     HomeBannerItem(R.drawable.hadi, "Hadi Choopan"),
