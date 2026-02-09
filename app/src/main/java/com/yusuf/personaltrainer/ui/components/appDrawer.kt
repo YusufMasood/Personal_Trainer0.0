@@ -20,6 +20,8 @@ import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -29,11 +31,15 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.yusuf.personaltrainer.R
+import com.yusuf.personaltrainer.ui.viewModel.UserProfileViewModel
 
 @Composable
 fun AppDrawer(
+    userProfileViewModel: UserProfileViewModel,
     onItemClick: () -> Unit
 ) {
+
+    val profile by userProfileViewModel.profile.collectAsState()
 
     Column(
         modifier = Modifier
@@ -53,13 +59,13 @@ fun AppDrawer(
             Column {
                 Box(
                     modifier = Modifier
-                        .size(60.dp)
+                        .size(40.dp)
                         .background(Color.Cyan, CircleShape)
                 )
 
                 Spacer(modifier = Modifier.height(12.dp))
 
-                Text("User_name", color = Color.Black, fontWeight = FontWeight.Bold)
+                Text(text = profile?.name ?: "User", color = Color.Black, fontWeight = FontWeight.Bold)
                 Text("Email_id", color = Color.Black)
             }
         }
@@ -117,6 +123,8 @@ fun DrawerItem(
         Spacer(modifier = Modifier.width(16.dp))
 
         Text(text = title, fontSize = 16.sp)
+
+
     }
 }
 

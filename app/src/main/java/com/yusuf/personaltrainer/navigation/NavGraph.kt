@@ -78,15 +78,8 @@ fun AppNavGraph(
         //  PERSONAL INFO SCREEN (REAL DB USE)
         composable(Routes.PERSONAL_INFO) {
 
-            val context = LocalContext.current
+            val viewModel: PersonalInfoViewModel = androidx.lifecycle.viewmodel.compose.viewModel()
 
-            val db = remember {
-                AppDatabase.getInstance(context)
-            }
-
-            val viewModel = remember {
-                PersonalInfoViewModel(db.userProfileDao())
-            }
 
             PersonalInfoScreen(
                 viewModel = viewModel,
@@ -98,9 +91,6 @@ fun AppNavGraph(
             )
         }
 
-        composable(Routes.HOME) {
-            HomeScreen()
-        }
     }
 }
 

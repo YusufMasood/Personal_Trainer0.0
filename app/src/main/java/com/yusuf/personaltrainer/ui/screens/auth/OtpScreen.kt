@@ -57,13 +57,14 @@ import kotlinx.coroutines.delay
 fun otpScreen(phoneNumber : String, verificationId: String, onLoginSuccess: () -> Unit) {
 
 
+
     val context = LocalContext.current
     val auth = FirebaseAuth.getInstance()
 
     var isVerifying by remember { mutableStateOf(false) }
 
-    val db = remember { AppDatabase.getInstance(context) }
-    val viewModel = remember { PersonalInfoViewModel(db.userProfileDao()) }
+    val viewModel: PersonalInfoViewModel = androidx.lifecycle.viewmodel.compose.viewModel()
+
 
 
 

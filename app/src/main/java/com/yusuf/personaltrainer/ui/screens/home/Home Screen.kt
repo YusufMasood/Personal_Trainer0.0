@@ -4,6 +4,7 @@ package com.yusuf.personaltrainer.ui.screens.home
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.rememberDrawerState
@@ -13,6 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -20,30 +22,30 @@ import androidx.navigation.compose.rememberNavController
 import com.yusuf.personaltrainer.ui.components.AppDrawer
 import com.yusuf.personaltrainer.ui.components.BottomNavBar
 import com.yusuf.personaltrainer.ui.screens.Tools.ToolsScreen
+import com.yusuf.personaltrainer.ui.viewModel.UserProfileViewModel
 import kotlinx.coroutines.launch
-
 
 @Composable
 fun HomeScreen() {
 
-    val homeNavController = rememberNavController()
+    val userProfileViewModel: UserProfileViewModel = viewModel()
 
+    val homeNavController = rememberNavController()
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val scope = rememberCoroutineScope()
 
-
-
-    Box(modifier = Modifier.fillMaxSize()
-        .background(Color(0xFFF2F2F2))
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color(0xFFF2F2F2))
     ) {
 
-
-
-        // 🟦 DRAWER WRAPS THE CONTENT
+        // 🟦 DRAWER
         ModalNavigationDrawer(
             drawerState = drawerState,
             drawerContent = {
                 AppDrawer(
+                    userProfileViewModel = userProfileViewModel,
                     onItemClick = {
                         scope.launch { drawerState.close() }
                     }
@@ -51,50 +53,54 @@ fun HomeScreen() {
             }
         ) {
 
-
-
-            //lazy row with images and text
-
-            HomeBannerSlider(items = homeBannerItems)
-
-
-            // 🟩 HOME NAVIGATION
-            NavHost(
-                navController = homeNavController,
-                startDestination = "home"
+            // 🟩 SCROLLABLE CONTENT
+            LazyColumn(
+                modifier = Modifier.fillMaxSize()
             ) {
 
-                composable("home") {
+                // 🔝 Home top bar + rest
+                item {
                     HomeContent(
+                        userProfileViewModel = userProfileViewModel,
                         onProfileClick = {
                             scope.launch { drawerState.open() }
                         }
                     )
                 }
 
-                composable("coach") {
-                  //  CoachScreen()
+                // 🔥 Banner
+                item {
+                    HomeBannerSlider(items = homeBannerItems)
                 }
 
-                composable("scan") {
-                  //  ScanScreen()
-                }
 
-                composable("tools") {
-                    ToolsScreen()
-                }
+                // 🧭 Navigation content
+                item {
+                    NavHost(
+                        navController = homeNavController,
+                        startDestination = "home"
+                    ) {
 
-                composable("settings") {
-                   // SettingsScreen()
+                        composable("home") { }
+
+                        composable("coach") { }
+
+                        composable("scan") { }
+
+                        composable("tools") {
+                            ToolsScreen()
+                        }
+
+                        composable("settings") { }
+                    }
                 }
             }
         }
 
-
-
-
-        // 🟨 BOTTOM NAV (FLOATING ABOVE EVERYTHING)
-        Box(modifier = Modifier.align(Alignment.BottomCenter)) {
+        // 🟨 BOTTOM NAV (FLOATING)
+        Box(
+            modifier = Modifier.align(Alignment.BottomCenter)
+        ) {
             BottomNavBar(
                 selectedIndex = currentIndex(homeNavController),
                 onItemSelected = { index ->
@@ -110,6 +116,7 @@ fun HomeScreen() {
         }
     }
 }
+
 
 
 

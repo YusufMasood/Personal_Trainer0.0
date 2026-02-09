@@ -82,8 +82,6 @@ fun HomeBannerSlider(
 
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
 
-        Spacer(modifier = Modifier.height(80.dp))
-
         LazyRow(
             state = listState,
             modifier = Modifier.fillMaxWidth()

@@ -34,4 +34,6 @@ interface UserProfileDao {
 
     @Query("SELECT * FROM user_profile WHERE id = 1")
     fun getProfile(): Flow<UserProfileEntity?>
+
+
 }

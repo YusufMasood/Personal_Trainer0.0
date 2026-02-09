@@ -1,18 +1,20 @@
 package com.yusuf.personaltrainer.ui.screens.auth
 
-import androidx.lifecycle.ViewModel
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+import com.yusuf.personaltrainer.data.local.AppDatabase
 import com.yusuf.personaltrainer.data.local.dao.UserProfileDao
 import com.yusuf.personaltrainer.data.local.entity.UserProfileEntity
 import kotlinx.coroutines.launch
-import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.launch
-
-
 
 class PersonalInfoViewModel(
-    private val dao: UserProfileDao
-) : ViewModel() {
+    application: Application
+) : AndroidViewModel(application) {
+
+    // ✅ DAO initialized safely (NO CRASH)
+    private val dao: UserProfileDao =
+        AppDatabase.getInstance(application).userProfileDao()
 
     fun saveProfile(
         name: String,
@@ -60,29 +62,22 @@ class PersonalInfoViewModel(
                         phoneNumber = phoneNumber
                     )
                 )
-
                 onSuccess()
-
             } catch (e: Exception) {
                 onError("Failed to save profile")
             }
         }
     }
 
-
     fun savePhoneNumber(
         phoneNumber: String,
         onSuccess: () -> Unit
     ) {
         viewModelScope.launch {
-
-                dao.updatePhoneNumber(phoneNumber)
-
+            dao.updatePhoneNumber(phoneNumber)
             onSuccess()
         }
     }
-
-
 
     fun savePersonalInfo(
         name: String,
@@ -105,5 +100,4 @@ class PersonalInfoViewModel(
             onSuccess()
         }
     }
-
 }
