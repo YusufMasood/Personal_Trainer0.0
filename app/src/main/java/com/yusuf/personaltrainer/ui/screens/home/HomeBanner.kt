@@ -31,12 +31,13 @@ data class HomeBannerItem(
 )
 
 val homeBannerItems = listOf(
-    HomeBannerItem(R.drawable.profile_image, "Chris Bumstead"),
-    HomeBannerItem(R.drawable.profile_image, "Kaigreen"),
-    HomeBannerItem(R.drawable.profile_image, "Hadi Choopan"),
-    HomeBannerItem(R.drawable.profile_image,"Arnold Schwarzenegger"),
-    HomeBannerItem(R.drawable.profile_image,"Roni Colmenares"),
-    HomeBannerItem(R.drawable.profile_image,"Jay Cutler")
+    HomeBannerItem(R.drawable.salman,"Salman Khan"),
+    HomeBannerItem(R.drawable.chris, "Chris Bumstead"),
+    HomeBannerItem(R.drawable.kaigreen, "Kai Greene"),
+    HomeBannerItem(R.drawable.hadi, "Hadi Choopan"),
+    HomeBannerItem(R.drawable.arnold,"Arnold Schwarzenegger"),
+    HomeBannerItem(R.drawable.ronnie,"Roni Coleman"),
+    HomeBannerItem(R.drawable.bigrammy,"Big Ramy")
 )
 
 
@@ -49,8 +50,8 @@ fun HomeBannerSlider(
 
     val configuration = LocalConfiguration.current
     val screenWidth = configuration.screenWidthDp.dp
-    val isTablet = configuration.screenWidthDp >= 600
-    val bannerHeight = if (isTablet) 300.dp else 220.dp
+
+
 
     val infiniteCount = Int.MAX_VALUE
     val startIndex = infiniteCount / 2 - (infiniteCount / 2) % items.size
@@ -93,7 +94,6 @@ fun HomeBannerSlider(
                 HomeBannerItemView(
                     item = items[realIndex],
                     width = screenWidth,
-                    height = bannerHeight
                 )
             }
         }
@@ -113,12 +113,11 @@ fun HomeBannerSlider(
 fun HomeBannerItemView(
     item: HomeBannerItem,
     width: Dp,
-    height: Dp
 ) {
     Box(
         modifier = Modifier
             .width(width)
-            .height(height)
+            .aspectRatio(16f / 9f)
             .padding(horizontal = 24.dp)
             .shadow(
                 elevation = 20.dp,
