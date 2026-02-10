@@ -12,3 +12,4 @@ data class UserProfileEntity(
     val heightInch: Int,
     val phoneNumber: String
 )
+
