@@ -45,7 +45,10 @@ fun ToolsScreen() {
             columns = GridCells.Fixed(2),
             verticalArrangement = Arrangement.spacedBy(16.dp),
             horizontalArrangement = Arrangement.spacedBy(16.dp),
-            modifier = Modifier.fillMaxSize()
+            modifier = Modifier
+                .fillMaxWidth()
+                .weight(1f)
+
         ) {
             items(toolsList) { label ->
                 ToolItem(

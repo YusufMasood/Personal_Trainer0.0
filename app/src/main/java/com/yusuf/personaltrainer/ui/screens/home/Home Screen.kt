@@ -1,32 +1,20 @@
 package com.yusuf.personaltrainer.ui.screens.home
 
-
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ModalNavigationDrawer
-import androidx.compose.material3.Text
 import androidx.compose.material3.rememberDrawerState
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.modifier.modifierLocalConsumer
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
-import androidx.navigation.compose.currentBackStackEntryAsState
-import androidx.navigation.compose.rememberNavController
-import com.yusuf.personaltrainer.ui.components.AppDrawer
-import com.yusuf.personaltrainer.ui.components.BottomNavBar
-import com.yusuf.personaltrainer.ui.components.CaloriesCounterCard
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.*
+import com.yusuf.personaltrainer.ui.components.*
 import com.yusuf.personaltrainer.ui.screens.Tools.ToolsScreen
 import com.yusuf.personaltrainer.ui.viewModel.UserProfileViewModel
 import kotlinx.coroutines.launch
@@ -46,7 +34,6 @@ fun HomeScreen() {
             .background(Color(0xFFF2F2F2))
     ) {
 
-        // 🟦 DRAWER
         ModalNavigationDrawer(
             drawerState = drawerState,
             drawerContent = {
@@ -59,60 +46,84 @@ fun HomeScreen() {
             }
         ) {
 
-            // 🟩 SCROLLABLE CONTENT
-            LazyColumn(
+            // 🔥 NAV HOST OUTSIDE LAZYCOLUMN
+            NavHost(
+                navController = homeNavController,
+                startDestination = "home",
                 modifier = Modifier.fillMaxSize()
             ) {
 
-                // 🔝 Home top bar + rest
-                item {
-                    HomeContent(
-                        userProfileViewModel = userProfileViewModel,
-                        onProfileClick = {
-                            scope.launch { drawerState.open() }
-                        }
-                    )
-                }
+                composable("home") {
 
-                //  Banner
-                item {
-                    HomeBannerSlider(items = homeBannerItems)
-                }
-
-                item {
-                    Spacer(modifier = Modifier.heightIn(42.dp))
-                }
-
-                //Calories counter
-                item {
-                    CaloriesCounterCard(1700,2000,100,78,34,{})
-                }
-
-
-                //  Navigation content
-                item {
-                    NavHost(
-                        navController = homeNavController,
-                        startDestination = "home"
+                    // Only Home screen scrollable content
+                    LazyColumn(
+                        modifier = Modifier.fillMaxSize()
                     ) {
 
-                        composable("home") { }
-
-                        composable("coach") { }
-
-                        composable("scan") { }
-
-                        composable("tools") {
-                            ToolsScreen()
+                        item {
+                            HomeContent(
+                                userProfileViewModel = userProfileViewModel,
+                                onProfileClick = {
+                                    scope.launch { drawerState.open() }
+                                }
+                            )
                         }
 
-                        composable("settings") { }
+                        item {
+                            HomeBannerSlider(items = homeBannerItems)
+                        }
+
+                        item {
+                            Spacer(modifier = Modifier.height(42.dp))
+                        }
+
+                        item {
+                            CaloriesCounterCard(
+                                1700,
+                                2000,
+                                100,
+                                78,
+                                34,
+                                {}
+                            )
+                        }
+                    }
+                }
+
+                composable("coach") {
+                    Box(
+                        modifier = Modifier.fillMaxSize(),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        // Coach screen content
+                    }
+                }
+
+                composable("scan") {
+                    Box(
+                        modifier = Modifier.fillMaxSize(),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        // Scan screen content
+                    }
+                }
+
+                composable("tools") {
+                    ToolsScreen()
+                }
+
+                composable("settings") {
+                    Box(
+                        modifier = Modifier.fillMaxSize(),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        // Settings screen content
                     }
                 }
             }
         }
 
-        // 🟨 BOTTOM NAV (FLOATING)
+        // 🟨 Bottom Nav Floating
         Box(
             modifier = Modifier.align(Alignment.BottomCenter)
         ) {
@@ -120,7 +131,9 @@ fun HomeScreen() {
                 selectedIndex = currentIndex(homeNavController),
                 onItemSelected = { index ->
                     when (index) {
-                        0 -> homeNavController.navigate("home")
+                        0 -> homeNavController.navigate("home") {
+                            popUpTo("home") { inclusive = true }
+                        }
                         1 -> homeNavController.navigate("coach")
                         2 -> homeNavController.navigate("scan")
                         3 -> homeNavController.navigate("tools")
@@ -133,9 +146,8 @@ fun HomeScreen() {
 }
 
 
-
 @Composable
-fun currentIndex(navController: androidx.navigation.NavHostController): Int {
+fun currentIndex(navController: NavHostController): Int {
     val route = navController
         .currentBackStackEntryAsState()
         .value
@@ -152,13 +164,3 @@ fun currentIndex(navController: androidx.navigation.NavHostController): Int {
     }
 }
 
-
-
-
-@Preview
-@Composable
-fun Show3(){
-
-    HomeScreen()
-
-}

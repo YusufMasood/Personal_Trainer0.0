@@ -6,10 +6,10 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "user_profile")
 data class UserProfileEntity(
     @PrimaryKey val id: Int = 1, // only one user
-    val name: String,
-    val age: Int,
-    val weightKg: Float,
-    val heightInch: Int,
-    val phoneNumber: String
+    val name: String = "Guest",
+    val age: Int = 0,
+    val weightKg: Float = 0f,
+    val heightInch: Int = 0,
+    val phoneNumber: String = "0000000000"
 )
 

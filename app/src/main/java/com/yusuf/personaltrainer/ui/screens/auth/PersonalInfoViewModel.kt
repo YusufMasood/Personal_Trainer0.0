@@ -74,10 +74,27 @@ class PersonalInfoViewModel(
         onSuccess: () -> Unit
     ) {
         viewModelScope.launch {
-            dao.updatePhoneNumber(phoneNumber)
+
+            val existing = dao.getProfileOnce()
+
+            if (existing == null) {
+                // First time login → create row
+                dao.saveProfile(
+                    UserProfileEntity(
+                        phoneNumber = phoneNumber
+                    )
+                )
+            } else {
+                // Row exists → update phone
+                dao.saveProfile(
+                    existing.copy(phoneNumber = phoneNumber)
+                )
+            }
+
             onSuccess()
         }
     }
+
 
     fun savePersonalInfo(
         name: String,
@@ -91,13 +108,28 @@ class PersonalInfoViewModel(
             (feet.toIntOrNull() ?: 0) * 12 + (inch.toIntOrNull() ?: 0)
 
         viewModelScope.launch {
-            dao.updatePersonalInfo(
-                name = name,
-                age = age.toInt(),
-                weight = weight.toFloat(),
-                height = heightInInches
-            )
+
+            val existing = dao.getProfileOnce()
+
+            val updatedProfile = if (existing == null) {
+                UserProfileEntity(
+                    name = name,
+                    age = age.toInt(),
+                    weightKg = weight.toFloat(),
+                    heightInch = heightInInches
+                )
+            } else {
+                existing.copy(
+                    name = name,
+                    age = age.toInt(),
+                    weightKg = weight.toFloat(),
+                    heightInch = heightInInches
+                )
+            }
+
+            dao.saveProfile(updatedProfile)
             onSuccess()
         }
     }
+
 }
