@@ -79,7 +79,7 @@ fun HomeScreen() {
 
                         item {
                             CaloriesCounterCard(
-                                1700,
+                                700,
                                 2000,
                                 100,
                                 78,
