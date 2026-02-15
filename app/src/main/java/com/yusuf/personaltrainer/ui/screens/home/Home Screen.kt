@@ -10,6 +10,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
@@ -79,7 +80,7 @@ fun HomeScreen() {
 
                         item {
                             CaloriesCounterCard(
-                                700,
+                                1700,
                                 2000,
                                 100,
                                 78,
@@ -162,5 +163,11 @@ fun currentIndex(navController: NavHostController): Int {
         "settings" -> 4
         else -> 0
     }
+}
+
+@Preview
+@Composable
+fun homeShow(){
+    HomeScreen()
 }
 
