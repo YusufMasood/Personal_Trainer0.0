@@ -21,7 +21,7 @@ import com.yusuf.personaltrainer.ui.viewModel.UserProfileViewModel
 import kotlinx.coroutines.launch
 
 @Composable
-fun HomeScreen() {
+fun HomeScreen(onFoodAdd : () -> Unit) {
 
     val userProfileViewModel: UserProfileViewModel = viewModel()
 
@@ -85,7 +85,7 @@ fun HomeScreen() {
                                 100,
                                 78,
                                 34,
-                                {}
+                                onFoodAdd
                             )
                         }
                     }
@@ -168,6 +168,6 @@ fun currentIndex(navController: NavHostController): Int {
 @Preview
 @Composable
 fun homeShow(){
-    HomeScreen()
+    HomeScreen({})
 }
 
