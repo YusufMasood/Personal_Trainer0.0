@@ -6,7 +6,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import com.yusuf.personaltrainer.ui.screens.FoodItems.CaloriesScreen
+import com.yusuf.personaltrainer.ui.screens.FoodItems.MealScreen
 import com.yusuf.personaltrainer.ui.screens.auth.PersonalInfoScreen
 import com.yusuf.personaltrainer.ui.screens.auth.PersonalInfoViewModel
 import com.yusuf.personaltrainer.ui.screens.auth.loginScreen
@@ -101,7 +101,7 @@ fun AppNavGraph(
         }
 
         composable(Routes.CALORIES) {
-            CaloriesScreen()
+            MealScreen(0,0,0,0,0)
         }
     }
 }

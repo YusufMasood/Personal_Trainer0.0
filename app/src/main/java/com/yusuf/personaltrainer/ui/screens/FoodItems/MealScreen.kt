@@ -1,6 +1,5 @@
 package com.yusuf.personaltrainer.ui.screens.FoodItems
 
-import android.R.attr.progress
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.Box
@@ -17,12 +16,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.yusuf.personaltrainer.ui.components.AddFoodCard
-import com.yusuf.personaltrainer.ui.components.CaloriesCounterCard
 import com.yusuf.personaltrainer.ui.components.GradientLinearProgressBar
 
 
 @Composable
-fun CaloriesScreen(
+fun MealScreen(
     consumedCalories: Int,
     targetCalories: Int,
     protein: Int,
@@ -89,5 +87,5 @@ fun CaloriesScreen(
 @Preview(showSystemUi = true)
 @Composable
 fun  showFoods(){
-    CaloriesScreen(1600,2000,160,256,60)
+    MealScreen(1600,2000,160,256,60)
 }
