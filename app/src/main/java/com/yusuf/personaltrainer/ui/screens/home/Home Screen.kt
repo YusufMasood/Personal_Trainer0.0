@@ -3,8 +3,10 @@ package com.yusuf.personaltrainer.ui.screens.home
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material3.Button
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ModalNavigationDrawer
+import androidx.compose.material3.Text
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -81,12 +83,12 @@ fun HomeScreen(onFoodAdd : () -> Unit) {
                         item {
                             CaloriesCounterCard(
                                 1700,
-                                2000,
-                                100,
-                                78,
-                                34,
-                                onFoodAdd
+                                2000
                             )
+                        }
+
+                        item{
+                            Button(onFoodAdd) { Text("Add food") }
                         }
                     }
                 }

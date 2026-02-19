@@ -31,10 +31,7 @@ import androidx.compose.ui.unit.dp
 fun CaloriesCounterCard(
     consumedCalories: Int,
     targetCalories: Int,
-    protein: Int,
-    carbs: Int,
-    fat: Int,
-    onAddFoodClick: () -> Unit
+
 ) {
     val rawProgress = consumedCalories.toFloat() / targetCalories
     val progress = rawProgress.coerceIn(0f, 1f)
@@ -88,20 +85,6 @@ fun CaloriesCounterCard(
 
             Spacer(Modifier.height(12.dp))
 
-            MacroBreakdown(
-                protein = protein,
-                carbs = carbs,
-                fat = fat
-            )
-
-            Spacer(Modifier.height(12.dp))
-
-            Button(
-                onClick = onAddFoodClick,
-                modifier = Modifier.align(Alignment.End)
-            ) {
-                Text("Add Food")
-            }
         }
     }
 }
@@ -149,11 +132,7 @@ fun MacroBreakdown(
                 .clickable { expanded = !expanded },
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text(
-                text = "Macros",
-                style = MaterialTheme.typography.bodyMedium,
-                modifier = Modifier.weight(1f)
-            )
+
             Icon(
                 imageVector = if (expanded)
                     Icons.Default.KeyboardArrowUp
@@ -180,5 +159,5 @@ fun MacroBreakdown(
 @Preview
 @Composable
 fun showClaories(){
-    CaloriesCounterCard(45,1500,45,75,23,{})
+    CaloriesCounterCard(45,1500)
 }
