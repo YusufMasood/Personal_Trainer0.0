@@ -83,13 +83,12 @@ fun HomeScreen(onFoodAdd : () -> Unit) {
                         item {
                             CaloriesCounterCard(
                                 1700,
-                                2000
+                                2000,
+                                onFoodAdd
                             )
                         }
 
-                        item{
-                            Button(onFoodAdd) { Text("Add food") }
-                        }
+
                     }
                 }
 
