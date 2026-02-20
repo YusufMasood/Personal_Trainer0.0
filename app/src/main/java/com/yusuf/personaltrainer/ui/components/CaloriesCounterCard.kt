@@ -31,6 +31,7 @@ import androidx.compose.ui.unit.dp
 fun CaloriesCounterCard(
     consumedCalories: Int,
     targetCalories: Int,
+    onFoodAdd: () -> Unit
 
 ) {
     val rawProgress = consumedCalories.toFloat() / targetCalories
@@ -84,6 +85,13 @@ fun CaloriesCounterCard(
             )
 
             Spacer(Modifier.height(12.dp))
+
+            Button(
+                onClick = onFoodAdd,
+                modifier = Modifier.align(Alignment.End)
+            ) {
+                Text("Add Food")
+            }
 
         }
     }
@@ -159,5 +167,5 @@ fun MacroBreakdown(
 @Preview
 @Composable
 fun showClaories(){
-    CaloriesCounterCard(45,1500)
+    CaloriesCounterCard(1145,1500,{})
 }
