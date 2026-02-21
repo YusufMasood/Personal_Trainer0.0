@@ -83,7 +83,7 @@ fun loginScreen(onGoHome: () -> Unit = {} , sendOtp: (String, String) -> Unit ){
             override fun onVerificationFailed(e: FirebaseException) {
                 Toast.makeText(
                     context,
-                    "OTP failed: ${e.message}",
+                    "OTP failed try again: ${e.message}",
                     Toast.LENGTH_LONG
                 ).show()
 
@@ -98,7 +98,7 @@ fun loginScreen(onGoHome: () -> Unit = {} , sendOtp: (String, String) -> Unit ){
                 verificationId = verId
                 Toast.makeText(
                     context,
-                    "OTP sent successfully",
+                    "OTP sent successfully!",
                     Toast.LENGTH_SHORT
                 ).show()
 
@@ -149,7 +149,7 @@ fun loginScreen(onGoHome: () -> Unit = {} , sendOtp: (String, String) -> Unit ){
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        Text("Enter your phone number", fontSize = 20.sp, fontWeight = FontWeight.Bold)
+        Text("Enter your phone number:", fontSize = 20.sp, fontWeight = FontWeight.Bold)
 
 
         Spacer(modifier = Modifier.height(8.dp))

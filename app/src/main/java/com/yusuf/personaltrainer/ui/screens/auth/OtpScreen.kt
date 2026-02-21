@@ -237,7 +237,7 @@ fun otpScreen(phoneNumber : String, verificationId: String, onLoginSuccess: () -
                                     onSuccess = {
                                         Toast.makeText(
                                             context,
-                                            "Login successful",
+                                            "Login successful👍",
                                             Toast.LENGTH_SHORT
                                         ).show()
                                         onLoginSuccess()
@@ -245,7 +245,7 @@ fun otpScreen(phoneNumber : String, verificationId: String, onLoginSuccess: () -
                                 )
 
                             } else {
-                                Toast.makeText(context, "Invalid OTP", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(context, "Invalid OTP !  Try again", Toast.LENGTH_SHORT).show()
                             }
                         }
 

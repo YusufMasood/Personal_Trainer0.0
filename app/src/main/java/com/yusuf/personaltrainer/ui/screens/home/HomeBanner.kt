@@ -32,7 +32,7 @@ data class HomeBannerItem(
 
 val homeBannerItems = listOf(
     HomeBannerItem(R.drawable.salman,"Salman Khan🔥"),
-    HomeBannerItem(R.drawable.chris, "Chris Bumstead"),
+    HomeBannerItem(R.drawable.chris, "Chris Bumstead💀"),
     HomeBannerItem(R.drawable.kaigreen, "Kai Greene"),
     HomeBannerItem(R.drawable.hadi, "Hadi Choopan"),
     HomeBannerItem(R.drawable.arnold,"Arnold Schwarzenegger"),
@@ -116,7 +116,7 @@ fun HomeBannerItemView(
         modifier = Modifier
             .width(width)
             .aspectRatio(16f / 9f)
-            .padding(horizontal = 24.dp)
+            .padding(horizontal = 25.dp)
             .shadow(
                 elevation = 20.dp,
                 shape = RoundedCornerShape(24.dp),
