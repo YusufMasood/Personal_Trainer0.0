@@ -67,7 +67,7 @@ fun BmrScreen() {
                     fontSize = 16.sp
                 )
 
-                Spacer(modifier = Modifier.height(12.dp))
+                Spacer(modifier = Modifier.height(11.dp))
 
                 OutlinedTextField(
                     value = weight,
@@ -127,7 +127,7 @@ fun BmrScreen() {
                         expanded = expanded,
                         onDismissRequest = { expanded = false }
                     ) {
-                        listOf("Sedentary", "Light", "Moderate", "Active").forEach {
+                        listOf("Sedentary", "Light", "Moderate", "Active!").forEach {
                             DropdownMenuItem(
                                 text = { Text(it) },
                                 onClick = {
