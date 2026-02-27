@@ -8,17 +8,22 @@ import com.yusuf.personaltrainer.data.local.dao.DailyNutritionDao
 import com.yusuf.personaltrainer.data.local.dao.UserProfileDao
 import com.yusuf.personaltrainer.data.local.entity.DailyNutritionEntity
 import com.yusuf.personaltrainer.data.local.entity.UserProfileEntity
+import com.yusuf.personaltrainer.data.local.entity.FoodEntity
+import com.yusuf.personaltrainer.data.local.dao.FoodDao
 
 @Database(
     entities = [UserProfileEntity::class,
-        DailyNutritionEntity::class],
-    version = 3,
+              DailyNutritionEntity::class,
+              FoodEntity::class],
+    version = 6,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun userProfileDao(): UserProfileDao
     abstract fun dailyNutritionDao(): DailyNutritionDao
+
+    abstract fun foodDao(): FoodDao
 
 
 

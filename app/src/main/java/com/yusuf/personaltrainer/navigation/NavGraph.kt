@@ -101,7 +101,7 @@ fun AppNavGraph(
         }
 
         composable(Routes.CALORIES) {
-            MealScreen(0,0,0,0,0)
+            MealScreen()
         }
     }
 }

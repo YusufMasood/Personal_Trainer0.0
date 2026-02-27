@@ -13,6 +13,7 @@ data class FoodEntity(
     val foodId: Long,
 
     val name: String,
+    val category: String?,
 
     val caloriesPer100g: Double,
     val proteinPer100g: Double,
