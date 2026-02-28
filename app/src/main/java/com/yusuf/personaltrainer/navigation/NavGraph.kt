@@ -6,6 +6,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import com.yusuf.personaltrainer.ui.screens.FoodItems.FoodTestScreen
 import com.yusuf.personaltrainer.ui.screens.FoodItems.MealScreen
 import com.yusuf.personaltrainer.ui.screens.auth.PersonalInfoScreen
 import com.yusuf.personaltrainer.ui.screens.auth.PersonalInfoViewModel
@@ -94,14 +95,22 @@ fun AppNavGraph(
         composable(Routes.HOME){
            HomeScreen(
                onFoodAdd = {
-                   navController.navigate(Routes.CALORIES)
+                   navController.navigate(Routes.Meal)
                }
-
            )
         }
 
-        composable(Routes.CALORIES) {
-            MealScreen()
+        composable(Routes.Meal) {
+            MealScreen(
+                onAddFood = {
+                    navController.navigate(Routes.FoodTestScreen)
+                }
+            )
+        }
+
+
+        composable(Routes.FoodTestScreen){
+            FoodTestScreen()
         }
     }
 }

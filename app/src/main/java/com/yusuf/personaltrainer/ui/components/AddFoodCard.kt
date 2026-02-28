@@ -3,6 +3,7 @@ package com.yusuf.personaltrainer.ui.components
 
 
 
+import android.util.Log
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -28,7 +29,7 @@ import androidx.compose.ui.unit.sp
 
 
 @Composable
-fun AddFoodCard(){
+fun AddFoodCard(onAddFood : () -> Unit){
 
     Column() {
 
@@ -71,7 +72,7 @@ fun AddFoodCard(){
                     contentDescription = "AddButton",
                     modifier = Modifier
                         .size(28.dp)
-                        .clickable { }
+                        .clickable {onAddFood()}
                 )
             }
         }
@@ -116,7 +117,7 @@ fun AddFoodCard(){
                     contentDescription = "AddButton",
                     modifier = Modifier
                         .size(28.dp)
-                        .clickable { }
+                        .clickable {onAddFood()}
                 )
             }
         }
@@ -161,7 +162,7 @@ fun AddFoodCard(){
                     contentDescription = "AddButton",
                     modifier = Modifier
                         .size(28.dp)
-                        .clickable { }
+                        .clickable { onAddFood()}
                 )
             }
         }
@@ -207,7 +208,7 @@ fun AddFoodCard(){
                     contentDescription = "AddButton",
                     modifier = Modifier
                         .size(28.dp)
-                        .clickable { }
+                        .clickable { onAddFood()}
                 )
             }
         }
@@ -218,5 +219,5 @@ fun AddFoodCard(){
 @Preview
 @Composable
 fun showFoodCrad(){
-    AddFoodCard()
+    AddFoodCard({})
 }

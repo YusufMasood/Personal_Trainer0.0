@@ -26,8 +26,7 @@ import com.yusuf.personaltrainer.ui.components.GradientLinearProgressBar
 
 
 @Composable
-fun MealScreen(
-){
+fun MealScreen( onAddFood: () -> Unit){
 
     val context = LocalContext.current
 
@@ -61,7 +60,7 @@ fun MealScreen(
             item {
 
                 // cards for add food items
-                AddFoodCard()
+                AddFoodCard(onAddFood)
 
             }
 
@@ -74,5 +73,5 @@ fun MealScreen(
 @Preview(showSystemUi = true)
 @Composable
 fun  showFoods(){
-    MealScreen()
+    MealScreen({})
 }

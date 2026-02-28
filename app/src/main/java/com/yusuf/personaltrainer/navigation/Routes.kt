@@ -12,9 +12,11 @@ object Routes {
 
     const val BMR = "bmr"
 
-    const val CALORIES = "calories"
+    const val Meal = "meal"
 
     const val PERSONAL_INFO = "personal_info"
+
+    const val FoodTestScreen = "foodScreen"
     fun otpRoute(phone: String, verId: String): String {
         return "otp/$phone/$verId"
     }
