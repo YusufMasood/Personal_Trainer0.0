@@ -51,10 +51,7 @@ fun CaloriesExpandableCard(
         modifier = Modifier
             .fillMaxWidth()
             .padding(16.dp),
-        shape = RoundedCornerShape(20.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = Color(0xFFE6DFE8)
-        )
+        shape = RoundedCornerShape(20.dp)
     ) {
 
         Column(

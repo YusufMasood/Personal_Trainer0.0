@@ -5,7 +5,9 @@ import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -13,7 +15,9 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
@@ -23,50 +27,93 @@ import com.yusuf.personaltrainer.data.local.AppDatabase
 import com.yusuf.personaltrainer.ui.components.AddFoodCard
 import com.yusuf.personaltrainer.ui.components.CaloriesExpandableCard
 import com.yusuf.personaltrainer.ui.components.GradientLinearProgressBar
+import com.yusuf.personaltrainer.ui.components.MealSection
+import com.yusuf.personaltrainer.utils.DateUtils
 
 
 @Composable
-fun MealScreen( onAddFood: () -> Unit){
+fun MealScreen(
+    onAddFood: (String) -> Unit
+) {
 
     val context = LocalContext.current
+    val db = remember { AppDatabase.getInstance(context) }
 
-    LaunchedEffect(Unit) {
+    // Observe today's meal entries
+    val entries by db.mealEntryDao()
+        .getEntriesByDate(DateUtils.today())
+        .collectAsState(initial = emptyList())
 
-        val db = AppDatabase.getInstance(context)
-        val foods = db.foodDao().getAllFoods()
+    // Group by meal type
+    val breakfast = entries.filter { it.mealType == "Breakfast" }
+    val lunch = entries.filter { it.mealType == "Lunch" }
+    val snacks = entries.filter { it.mealType == "Snacks" }
+    val dinner = entries.filter { it.mealType == "Dinner" }
 
-        Log.d("FOOD_TEST", "Food count = ${foods.size}")
-    }
+    // Calculate daily total
+    val dailyCalories = entries.sumOf { it.calories }.toInt()
 
-    Box(modifier = Modifier.padding(12.dp)){
+    Box(modifier = Modifier.padding(12.dp)) {
 
-        LazyColumn(){
+        LazyColumn {
 
-            //Calories Expandible Card
-
+            // 🔥 Top Expandable Card
             item {
                 CaloriesExpandableCard(
-                    1200,
-                    2000,
-                    160,
-                    170,
-                    256,
-                    200,
-                    60,
-                    60
+                    consumedCalories = dailyCalories,
+                    targetCalories = 2000,
+                    protein = entries.sumOf { it.protein }.toInt(),
+                    proteinTarget = 170,
+                    carbs = entries.sumOf { it.carbs }.toInt(),
+                    carbsTarget = 256,
+                    fat = entries.sumOf { it.fat }.toInt(),
+                    fatTarget = 60
                 )
             }
 
+            // 🔥 Meal Sections
+
             item {
-
-                // cards for add food items
-                AddFoodCard(onAddFood)
-
+                MealSection(
+                    mealType = "Breakfast",
+                    items = breakfast
+                ) {
+                    onAddFood("Breakfast")
+                }
             }
 
+            item {
+                MealSection(
+                    mealType = "Lunch",
+                    items = lunch
+                ) {
+                    onAddFood("Lunch")
+                }
+            }
+
+            item {
+                MealSection(
+                    mealType = "Snacks",
+                    items = snacks
+                ) {
+                    onAddFood("Snacks")
+                }
+            }
+
+            item {
+                MealSection(
+                    mealType = "Dinner",
+                    items = dinner
+                ) {
+                    onAddFood("Dinner")
+                }
+            }
+
+            item {
+                Spacer(modifier = Modifier.height(20.dp))
+            }
         }
     }
-
 }
 
 

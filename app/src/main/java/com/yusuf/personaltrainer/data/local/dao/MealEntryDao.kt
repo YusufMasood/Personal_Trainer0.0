@@ -18,4 +18,5 @@ interface MealEntryDao {
 
     @Query("DELETE FROM meal_entries WHERE date = :date")
     suspend fun deleteAllForDate(date: String)
+
 }
