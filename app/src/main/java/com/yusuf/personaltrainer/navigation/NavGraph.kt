@@ -6,7 +6,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import com.yusuf.personaltrainer.ui.screens.FoodItems.FoodTestScreen
+import com.yusuf.personaltrainer.ui.screens.FoodItems.FoodSelectionScreen
 import com.yusuf.personaltrainer.ui.screens.FoodItems.MealScreen
 import com.yusuf.personaltrainer.ui.screens.auth.PersonalInfoScreen
 import com.yusuf.personaltrainer.ui.screens.auth.PersonalInfoViewModel
@@ -100,17 +100,37 @@ fun AppNavGraph(
            )
         }
 
+
+
         composable(Routes.Meal) {
             MealScreen(
-                onAddFood = {
-                    navController.navigate(Routes.FoodTestScreen)
+                onAddFood = {mealType ->
+                    navController.navigate(
+                        Routes.foodSelectionRoute(mealType)
+                    )
                 }
             )
         }
 
 
-        composable(Routes.FoodTestScreen){
-            FoodTestScreen()
+
+        // Calling food selection screen
+        composable(
+            route = Routes.FOOD_SELECTION,
+            arguments = listOf(
+                navArgument("mealType") { type = NavType.StringType }
+            )
+        ) { backStackEntry ->
+
+            val mealType =
+                backStackEntry.arguments?.getString("mealType") ?: "Breakfast"
+
+            FoodSelectionScreen(
+                mealType = mealType,
+                onFoodAdded = {
+                    navController.popBackStack()
+                }
+            )
         }
     }
 }

@@ -6,7 +6,6 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.navigation.compose.rememberNavController
 import com.yusuf.personaltrainer.navigation.AppNavGraph
-import com.yusuf.personaltrainer.ui.screens.FoodItems.FoodTestScreen
 import com.yusuf.personaltrainer.ui.theme.MyApplicationTheme
 
 class MainActivity : ComponentActivity() {

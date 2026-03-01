@@ -16,7 +16,11 @@ object Routes {
 
     const val PERSONAL_INFO = "personal_info"
 
-    const val FoodTestScreen = "foodScreen"
+    const val FOOD_SELECTION = "food_selection/{mealType}"
+
+    fun foodSelectionRoute(mealType: String): String {
+        return "food_selection/$mealType"
+    }
     fun otpRoute(phone: String, verId: String): String {
         return "otp/$phone/$verId"
     }
