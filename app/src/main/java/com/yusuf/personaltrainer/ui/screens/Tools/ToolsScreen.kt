@@ -17,9 +17,9 @@ import androidx.compose.ui.unit.sp
 fun ToolsScreen() {
 
     val toolsList = listOf(
-        "Label 1",
-        "Label 2",
-        "Label 3",
+        "BMI",
+        "BMR",
+        "Fat percentage",
         "Label 4",
         "Label 5",
         "Label 6",
