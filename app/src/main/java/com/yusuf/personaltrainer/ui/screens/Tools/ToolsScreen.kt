@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun ToolsScreen() {
+fun ToolsScreen( onBmi : () -> Unit) {
 
     val toolsList = listOf(
         "BMI",
@@ -49,13 +49,12 @@ fun ToolsScreen() {
                 .fillMaxWidth()
                 .weight(1f)
 
+
         ) {
             items(toolsList) { label ->
                 ToolItem(
                     label = label,
-                    onClick = {
-                        // TODO: navigation later
-                    }
+                    onClick = {onBmi}
                 )
             }
         }
@@ -65,5 +64,5 @@ fun ToolsScreen() {
 @Preview
 @Composable
 fun showTools(){
-    ToolsScreen()
+    ToolsScreen({})
 }

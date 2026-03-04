@@ -6,8 +6,10 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import com.yusuf.personaltrainer.ui.screens.BMR.BmrScreen
 import com.yusuf.personaltrainer.ui.screens.FoodItems.FoodSelectionScreen
 import com.yusuf.personaltrainer.ui.screens.FoodItems.MealScreen
+import com.yusuf.personaltrainer.ui.screens.Tools.ToolsScreen
 import com.yusuf.personaltrainer.ui.screens.auth.PersonalInfoScreen
 import com.yusuf.personaltrainer.ui.screens.auth.PersonalInfoViewModel
 import com.yusuf.personaltrainer.ui.screens.auth.loginScreen
@@ -94,9 +96,17 @@ fun AppNavGraph(
 
         composable(Routes.HOME){
            HomeScreen(
+               navController = navController,
                onFoodAdd = {
                    navController.navigate(Routes.Meal)
-               }
+               },
+               onTools = {navController.navigate(Routes.ToolScreen){
+                   launchSingleTop = true
+                   restoreState = true
+                   popUpTo(navController.graph.startDestinationId) {
+                       saveState = true
+                   }
+               } }
            )
         }
 
@@ -131,6 +141,17 @@ fun AppNavGraph(
                     navController.popBackStack()
                 }
             )
+        }
+
+
+        composable(Routes.ToolScreen){
+            ToolsScreen(
+                onBmi = {navController.navigate(Routes.BMI)}
+            )
+        }
+
+        composable(Routes.BMI){
+            BmrScreen()
         }
     }
 }

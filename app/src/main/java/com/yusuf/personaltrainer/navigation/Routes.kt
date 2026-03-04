@@ -6,13 +6,13 @@ object Routes {
     const val OTP = "otp/{phone}/{verId}"
     const val HOME = "home"
 
-    const val TOOLS = "tools"
-
     const val BMI = "bmi"
 
     const val BMR = "bmr"
 
     const val Meal = "meal"
+
+    const val ToolScreen = "tool_screen"
 
     const val PERSONAL_INFO = "personal_info"
 

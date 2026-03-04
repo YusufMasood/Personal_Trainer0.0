@@ -17,17 +17,20 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.*
+import com.yusuf.personaltrainer.navigation.Routes
 import com.yusuf.personaltrainer.ui.components.*
 import com.yusuf.personaltrainer.ui.screens.Tools.ToolsScreen
 import com.yusuf.personaltrainer.ui.viewModel.UserProfileViewModel
 import kotlinx.coroutines.launch
 
 @Composable
-fun HomeScreen(onFoodAdd : () -> Unit) {
+fun HomeScreen(
+    navController: NavHostController,
+    onFoodAdd : () -> Unit,
+    onTools : () -> Unit) {
 
     val userProfileViewModel: UserProfileViewModel = viewModel()
 
-    val homeNavController = rememberNavController()
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val scope = rememberCoroutineScope()
 
@@ -49,78 +52,37 @@ fun HomeScreen(onFoodAdd : () -> Unit) {
             }
         ) {
 
-            // 🔥 NAV HOST OUTSIDE LAZYCOLUMN
-            NavHost(
-                navController = homeNavController,
-                startDestination = "home",
-                modifier = Modifier.fillMaxSize()
+            // 🔥 YAHAN TUMHARA MAIN HOME UI AAYEGA
+
+            LazyColumn(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(bottom = 70.dp) // bottom nav ke liye space
             ) {
 
-                composable("home") {
-
-                    // Only Home screen scrollable content
-                    LazyColumn(
-                        modifier = Modifier.fillMaxSize()
-                    ) {
-
-                        item {
-                            HomeContent(
-                                userProfileViewModel = userProfileViewModel,
-                                onProfileClick = {
-                                    scope.launch { drawerState.open() }
-                                }
-                            )
+                item {
+                    HomeContent(
+                        userProfileViewModel = userProfileViewModel,
+                        onProfileClick = {
+                            scope.launch { drawerState.open() }
                         }
-
-                        item {
-                            HomeBannerSlider(items = homeBannerItems)
-                        }
-
-                        item {
-                            Spacer(modifier = Modifier.height(42.dp))
-                        }
-
-                        item {
-                            CaloriesCounterCard(
-                                1700,
-                                2000,
-                                onFoodAdd
-                            )
-                        }
-
-
-                    }
+                    )
                 }
 
-                composable("coach") {
-                    Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        // Coach screen content
-                    }
+                item {
+                    HomeBannerSlider(items = homeBannerItems)
                 }
 
-                composable("scan") {
-                    Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        // Scan screen content
-                    }
+                item {
+                    Spacer(modifier = Modifier.height(42.dp))
                 }
 
-                composable("tools") {
-                    ToolsScreen()
-                }
-
-                composable("settings") {
-                    Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        // Settings screen content
-                    }
+                item {
+                    CaloriesCounterCard(
+                        1700,
+                        2000,
+                        onFoodAdd
+                    )
                 }
             }
         }
@@ -130,16 +92,16 @@ fun HomeScreen(onFoodAdd : () -> Unit) {
             modifier = Modifier.align(Alignment.BottomCenter)
         ) {
             BottomNavBar(
-                selectedIndex = currentIndex(homeNavController),
+                selectedIndex = currentIndex(navController),
                 onItemSelected = { index ->
                     when (index) {
-                        0 -> homeNavController.navigate("home") {
+                        0 -> navController.navigate(Routes.HOME) {
                             popUpTo("home") { inclusive = true }
                         }
-                        1 -> homeNavController.navigate("coach")
-                        2 -> homeNavController.navigate("scan")
-                        3 -> homeNavController.navigate("tools")
-                        4 -> homeNavController.navigate("settings")
+                        1 -> navController.navigate("coach")
+                        2 -> navController.navigate("scan")
+                        3 -> navController.navigate(Routes.ToolScreen)
+                        4 -> navController.navigate("settings")
                     }
                 }
             )
@@ -169,6 +131,6 @@ fun currentIndex(navController: NavHostController): Int {
 @Preview
 @Composable
 fun homeShow(){
-    HomeScreen({})
+//    HomeScreen({},{},{})
 }
 
