@@ -99,7 +99,7 @@ fun HomeScreen(
                             1 -> navController.navigate("coach")
                             2 -> navController.navigate("scan")
                             3 -> navController.navigate(Routes.ToolScreen)
-                            4 -> navController.navigate("settings")
+                            4 -> navController.navigate(Routes.SettingScreen)
                         }
                     }
                 )

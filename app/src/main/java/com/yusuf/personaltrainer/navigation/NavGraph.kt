@@ -9,6 +9,7 @@ import androidx.navigation.navArgument
 import com.yusuf.personaltrainer.ui.screens.BMR.BmrScreen
 import com.yusuf.personaltrainer.ui.screens.FoodItems.FoodSelectionScreen
 import com.yusuf.personaltrainer.ui.screens.FoodItems.MealScreen
+import com.yusuf.personaltrainer.ui.screens.SettingScreen
 import com.yusuf.personaltrainer.ui.screens.Tools.ToolsScreen
 import com.yusuf.personaltrainer.ui.screens.auth.PersonalInfoScreen
 import com.yusuf.personaltrainer.ui.screens.auth.PersonalInfoViewModel
@@ -152,6 +153,10 @@ fun AppNavGraph(
 
         composable(Routes.BMI){
             BmrScreen()
+        }
+
+        composable(Routes.SettingScreen){
+            SettingScreen()
         }
     }
 }

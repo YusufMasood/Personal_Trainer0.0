@@ -14,6 +14,8 @@ object Routes {
 
     const val ToolScreen = "tool_screen"
 
+    const val SettingScreen = "setting_screen"
+
     const val PERSONAL_INFO = "personal_info"
 
     const val FOOD_SELECTION = "food_selection/{mealType}"
