@@ -1,11 +1,14 @@
 package com.yusuf.personaltrainer.ui.viewModel
 
 import android.app.Application
+import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.yusuf.personaltrainer.data.local.AppDatabase
 import com.yusuf.personaltrainer.data.local.entity.DailyNutritionEntity
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import java.time.LocalDate
@@ -13,6 +16,43 @@ import java.time.LocalDate
 class UserProfileViewModel(
     application: Application
 ) : AndroidViewModel(application) {
+
+
+
+
+
+    private val _name = MutableStateFlow("Lucifer")
+    val name: StateFlow<String> = _name
+
+    private val _weight = MutableStateFlow(80)
+    val weight: StateFlow<Int> = _weight
+
+    private val _calories = MutableStateFlow(2100)
+    val calories: StateFlow<Int> = _calories
+
+    private val _weeklyProgress = MutableStateFlow(0.7f)
+    val weeklyProgress: StateFlow<Float> = _weeklyProgress
+
+    private val _selectedColor = MutableStateFlow(Color(0xFF00E5FF))
+    val selectedColor: StateFlow<Color> = _selectedColor
+
+    fun updateColor(color: Color) {
+        _selectedColor.value = color
+    }
+
+    fun logout() {
+        // TODO: Add Firebase logout here
+    }
+
+
+
+
+
+
+
+
+
+
 
     // Database
     private val db = AppDatabase.getInstance(application)
