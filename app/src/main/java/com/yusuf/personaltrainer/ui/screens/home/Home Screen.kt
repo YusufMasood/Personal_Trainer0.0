@@ -52,12 +52,12 @@ fun HomeScreen(
             }
         ) {
 
-            // 🔥 YAHAN TUMHARA MAIN HOME UI AAYEGA
+
 
             LazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(bottom = 70.dp) // bottom nav ke liye space
+                    .padding(bottom = 70.dp)
             ) {
 
                 item {

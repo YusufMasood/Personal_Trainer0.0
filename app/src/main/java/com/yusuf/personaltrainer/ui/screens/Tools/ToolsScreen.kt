@@ -54,7 +54,7 @@ fun ToolsScreen( onBmi : () -> Unit) {
             items(toolsList) { label ->
                 ToolItem(
                     label = label,
-                    onClick = {onBmi}
+                    onClick = {onBmi()}
                 )
             }
         }
