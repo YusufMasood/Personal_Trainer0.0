@@ -26,8 +26,7 @@ import kotlinx.coroutines.launch
 @Composable
 fun HomeScreen(
     navController: NavHostController,
-    onFoodAdd : () -> Unit,
-    onTools : () -> Unit) {
+    onFoodAdd : () -> Unit) {
 
     val userProfileViewModel: UserProfileViewModel = viewModel()
 

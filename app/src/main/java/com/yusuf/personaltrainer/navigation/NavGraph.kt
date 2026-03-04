@@ -100,14 +100,7 @@ fun AppNavGraph(
                navController = navController,
                onFoodAdd = {
                    navController.navigate(Routes.Meal)
-               },
-               onTools = {navController.navigate(Routes.ToolScreen){
-                   launchSingleTop = true
-                   restoreState = true
-                   popUpTo(navController.graph.startDestinationId) {
-                       saveState = true
-                   }
-               } }
+               }
            )
         }
 
