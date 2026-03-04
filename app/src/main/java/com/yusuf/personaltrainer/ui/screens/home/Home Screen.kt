@@ -57,8 +57,7 @@ fun HomeScreen(
             LazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(bottom = 70.dp)
-            ) {
+                    .padding(bottom = 70.dp)) {
 
                 item {
                     HomeContent(
@@ -84,28 +83,31 @@ fun HomeScreen(
                         onFoodAdd
                     )
                 }
+        }
+
+            // 🟨 Bottom Nav Floating
+            Box(
+                modifier = Modifier.align(Alignment.BottomCenter)
+            ) {
+                BottomNavBar(
+                    selectedIndex = currentIndex(navController),
+                    onItemSelected = { index ->
+                        when (index) {
+                            0 -> navController.navigate(Routes.HOME) {
+                                popUpTo("home") { inclusive = true }
+                            }
+                            1 -> navController.navigate("coach")
+                            2 -> navController.navigate("scan")
+                            3 -> navController.navigate(Routes.ToolScreen)
+                            4 -> navController.navigate("settings")
+                        }
+                    }
+                )
             }
         }
 
-        // 🟨 Bottom Nav Floating
-        Box(
-            modifier = Modifier.align(Alignment.BottomCenter)
-        ) {
-            BottomNavBar(
-                selectedIndex = currentIndex(navController),
-                onItemSelected = { index ->
-                    when (index) {
-                        0 -> navController.navigate(Routes.HOME) {
-                            popUpTo("home") { inclusive = true }
-                        }
-                        1 -> navController.navigate("coach")
-                        2 -> navController.navigate("scan")
-                        3 -> navController.navigate(Routes.ToolScreen)
-                        4 -> navController.navigate("settings")
-                    }
-                }
-            )
-        }
+
+
     }
 }
 
