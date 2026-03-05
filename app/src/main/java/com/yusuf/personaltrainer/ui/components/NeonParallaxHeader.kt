@@ -5,9 +5,12 @@ import com.yusuf.personaltrainer.R
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -27,18 +30,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-
-
-
-
-
 @Composable
 fun NeonParallaxHeader(scrollState: LazyListState,
                        name: String,
-                       email: String,
-                       onEditClick: () -> Unit
-
-) {
+                       onEditClick: () -> Unit){
 
 
     val offset = scrollState.firstVisibleItemScrollOffset * 0.4f
@@ -60,7 +55,7 @@ fun NeonParallaxHeader(scrollState: LazyListState,
     ) {
         Box(modifier = Modifier
             .fillMaxWidth()
-            .padding(16.dp)
+            .padding(12.dp)
             .shadow(
                 elevation = 25.dp,
                 shape = RoundedCornerShape(16.dp),
@@ -82,13 +77,23 @@ fun NeonParallaxHeader(scrollState: LazyListState,
             )
 
 
-            Column(modifier = Modifier.align(alignment = Alignment.BottomCenter)) {
-                Text(name, color = Color.White, fontSize = 18.sp)
-                Text(email, color = Color.Gray, fontSize = 14.sp)
+            Column(modifier = Modifier.align(alignment = Alignment.TopStart)) {
+                Spacer(modifier = Modifier.height(12.dp))
+                Text("    "+name, color = Color.DarkGray, fontSize = 18.sp)
             }
 
-            OutlinedButton(onClick = onEditClick) {
-                Text("Edit")
+            Row(modifier = Modifier.align(alignment = Alignment.BottomCenter)) {
+
+                OutlinedButton(onClick = onEditClick){
+                    Text("Edit")
+                }
+
+                Spacer(modifier = Modifier.width(12.dp))
+
+                OutlinedButton(onClick = onEditClick){
+                    Text("Goal")
+                }
+
             }
 
 
@@ -102,6 +107,6 @@ fun NeonParallaxHeaderShow(){
 
     val listState = rememberLazyListState()
 
-    NeonParallaxHeader(scrollState = listState,"Yusuf","dfgh98765t",{})
+    NeonParallaxHeader(scrollState = listState,"Yusuf",{})
 }
 

@@ -28,17 +28,16 @@ fun SettingScreen(
     ) {
 
 
-// 🔥 2️⃣ Main Content
+       //  Main Content
         LazyColumn(
             state = listState,
             contentPadding = PaddingValues(top = 25.dp)
-        ) {
+        ){
 
             item {
 
                 NeonParallaxHeader(scrollState = listState,
                     name = name,
-                    email = "mdyusufmasood7488@gmail.com",
                     onEditClick = {})
             }
 
@@ -80,6 +79,6 @@ fun SettingScreen(
 
 @Preview
 @Composable
-fun settingScreenShow(){
+fun SettingScreenShow(){
     SettingScreen()
 }
