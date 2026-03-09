@@ -9,6 +9,7 @@ import androidx.compose.material.icons.filled.DarkMode
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Security
+import androidx.compose.material.icons.filled.SupportAgent
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.*
@@ -88,6 +89,7 @@ fun SettingsSection() {
         SettingItem(Icons.Default.Notifications, "Notifications") {}
         SettingItem(Icons.Default.Security, "Privacy") {}
         SettingItem(Icons.Default.LocationOn, "Location Access") {}
+        SettingItem(Icons.Default.SupportAgent,"Support") {}
     }
 }
 
