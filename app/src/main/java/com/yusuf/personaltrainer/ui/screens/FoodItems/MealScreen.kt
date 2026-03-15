@@ -29,6 +29,7 @@ import com.yusuf.personaltrainer.ui.components.CaloriesExpandableCard
 import com.yusuf.personaltrainer.ui.components.GradientLinearProgressBar
 import com.yusuf.personaltrainer.ui.components.MealSection
 import com.yusuf.personaltrainer.utils.DateUtils
+import java.nio.file.WatchEvent
 
 
 @Composable
@@ -55,7 +56,13 @@ fun MealScreen(
 
     Box(modifier = Modifier.padding(12.dp)) {
 
+
+
         LazyColumn {
+
+            item {
+                Spacer(modifier = Modifier.height(22.dp))
+            }
 
             // 🔥 Top Expandable Card
             item {
