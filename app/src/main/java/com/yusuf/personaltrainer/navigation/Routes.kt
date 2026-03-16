@@ -20,6 +20,8 @@ object Routes {
 
     const val FOOD_SELECTION = "food_selection/{mealType}"
 
+    const val ScannerCamera = "scanner_camera"
+
     fun foodSelectionRoute(mealType: String): String {
         return "food_selection/$mealType"
     }

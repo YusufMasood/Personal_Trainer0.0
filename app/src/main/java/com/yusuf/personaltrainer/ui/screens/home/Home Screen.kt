@@ -96,7 +96,7 @@ fun HomeScreen(
                                 popUpTo("home") { inclusive = true }
                             }
                             1 -> navController.navigate("coach")
-                            2 -> navController.navigate("scan")
+                            2 -> navController.navigate(Routes.ScannerCamera)
                             3 -> navController.navigate(Routes.ToolScreen)
                             4 -> navController.navigate(Routes.SettingScreen)
                         }
