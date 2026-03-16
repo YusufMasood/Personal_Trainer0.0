@@ -1,6 +1,6 @@
 package com.yusuf.personaltrainer.ui.screens.Scanner
 
-import androidx.annotation.OptIn
+import android.Manifest
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ExperimentalGetImage
 import androidx.camera.core.ImageAnalysis
@@ -10,17 +10,40 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.view.PreviewView
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.compose.LocalLifecycleOwner
+import com.google.accompanist.permissions.ExperimentalPermissionsApi
+import com.google.accompanist.permissions.isGranted
+import com.google.accompanist.permissions.rememberPermissionState
 
-
+@OptIn(ExperimentalPermissionsApi::class)
 @Composable
 fun Scanner() {
 
-    val context = LocalContext.current
+    val cameraPermissionState = rememberPermissionState(
+        Manifest.permission.CAMERA
+    )
+
+    when {
+
+        cameraPermissionState.status.isGranted -> {
+            CameraPreview()
+        }
+
+        else -> {
+            LaunchedEffect(Unit) {
+                cameraPermissionState.launchPermissionRequest()
+            }
+        }
+    }
+}
+
+@Composable
+fun CameraPreview() {
+
     val lifecycleOwner = LocalLifecycleOwner.current
 
     AndroidView(
@@ -37,22 +60,7 @@ fun Scanner() {
                 val preview = Preview.Builder().build()
                 preview.setSurfaceProvider(previewView.surfaceProvider)
 
-                val imageAnalyzer = ImageAnalysis.Builder()
-                    .setBackpressureStrategy(
-                        ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST
-                    )
-                    .build()
-
-                imageAnalyzer.setAnalyzer(
-                    ContextCompat.getMainExecutor(ctx)
-                ) { imageProxy ->
-
-                    // This is where ML will process the frame
-
-                    processImage(imageProxy)
-
-                    imageProxy.close()
-                }
+                val imageAnalyzer = ImageAnalysis.Builder().build()
 
                 val cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
 
@@ -74,16 +82,14 @@ fun Scanner() {
 }
 
 
-@OptIn(ExperimentalGetImage::class)
+@androidx.annotation.OptIn(ExperimentalGetImage::class)
 fun processImage(imageProxy: ImageProxy) {
 
     val mediaImage = imageProxy.image
 
     if (mediaImage != null) {
 
-        // Convert to bitmap if needed
-        // Send to ML model
-        // Detect food item
+        // ML processing will go here
 
     }
 }
