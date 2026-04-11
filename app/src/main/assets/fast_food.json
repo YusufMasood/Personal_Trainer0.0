@@ -1,0 +1,234 @@
+[
+  {
+    "name": "Veg Burger",
+    "category": "FastFood",
+    "nutrition": { "calories": 295, "protein": 8, "carbs": 40, "fat": 10 },
+    "servings": [{ "name": "1 burger", "grams": 150 }],
+    "aliases": ["burger"]
+  },
+  {
+    "name": "Chicken Burger",
+    "category": "FastFood",
+    "nutrition": { "calories": 350, "protein": 15, "carbs": 40, "fat": 15 },
+    "servings": [{ "name": "1 burger", "grams": 180 }],
+    "aliases": []
+  },
+  {
+    "name": "Cheese Burger",
+    "category": "FastFood",
+    "nutrition": { "calories": 400, "protein": 18, "carbs": 35, "fat": 22 },
+    "servings": [{ "name": "1 burger", "grams": 180 }],
+    "aliases": []
+  },
+  {
+    "name": "French Fries",
+    "category": "FastFood",
+    "nutrition": { "calories": 312, "protein": 3.4, "carbs": 41, "fat": 15 },
+    "servings": [{ "name": "1 serving", "grams": 117 }],
+    "aliases": ["fries"]
+  },
+  {
+    "name": "Pizza (Cheese)",
+    "category": "FastFood",
+    "nutrition": { "calories": 266, "protein": 11, "carbs": 33, "fat": 10 },
+    "servings": [{ "name": "1 slice", "grams": 100 }],
+    "aliases": ["pizza"]
+  },
+  {
+    "name": "Pizza (Chicken)",
+    "category": "FastFood",
+    "nutrition": { "calories": 285, "protein": 14, "carbs": 30, "fat": 12 },
+    "servings": [{ "name": "1 slice", "grams": 100 }],
+    "aliases": []
+  },
+  {
+    "name": "Veg Sandwich",
+    "category": "FastFood",
+    "nutrition": { "calories": 250, "protein": 7, "carbs": 35, "fat": 9 },
+    "servings": [{ "name": "1 sandwich", "grams": 150 }],
+    "aliases": []
+  },
+  {
+    "name": "Grilled Sandwich",
+    "category": "FastFood",
+    "nutrition": { "calories": 300, "protein": 10, "carbs": 35, "fat": 12 },
+    "servings": [{ "name": "1 sandwich", "grams": 150 }],
+    "aliases": []
+  },
+  {
+    "name": "Chicken Roll",
+    "category": "FastFood",
+    "nutrition": { "calories": 320, "protein": 18, "carbs": 35, "fat": 12 },
+    "servings": [{ "name": "1 roll", "grams": 180 }],
+    "aliases": ["kathi roll"]
+  },
+  {
+    "name": "Egg Roll",
+    "category": "FastFood",
+    "nutrition": { "calories": 280, "protein": 10, "carbs": 30, "fat": 12 },
+    "servings": [{ "name": "1 roll", "grams": 150 }],
+    "aliases": []
+  },
+  {
+    "name": "Paneer Roll",
+    "category": "FastFood",
+    "nutrition": { "calories": 330, "protein": 12, "carbs": 30, "fat": 15 },
+    "servings": [{ "name": "1 roll", "grams": 180 }],
+    "aliases": []
+  },
+  {
+    "name": "Chowmein",
+    "category": "FastFood",
+    "nutrition": { "calories": 220, "protein": 6, "carbs": 35, "fat": 7 },
+    "servings": [{ "name": "1 plate", "grams": 250 }],
+    "aliases": ["noodles"]
+  },
+  {
+    "name": "Fried Rice",
+    "category": "FastFood",
+    "nutrition": { "calories": 250, "protein": 6, "carbs": 35, "fat": 8 },
+    "servings": [{ "name": "1 plate", "grams": 250 }],
+    "aliases": []
+  },
+  {
+    "name": "Spring Rolls",
+    "category": "FastFood",
+    "nutrition": { "calories": 200, "protein": 5, "carbs": 25, "fat": 9 },
+    "servings": [{ "name": "2 rolls", "grams": 100 }],
+    "aliases": []
+  },
+  {
+    "name": "Momos (Veg)",
+    "category": "FastFood",
+    "nutrition": { "calories": 230, "protein": 8, "carbs": 35, "fat": 6 },
+    "servings": [{ "name": "6 pieces", "grams": 150 }],
+    "aliases": ["veg momos"]
+  },
+  {
+    "name": "Momos (Chicken)",
+    "category": "FastFood",
+    "nutrition": { "calories": 280, "protein": 14, "carbs": 30, "fat": 10 },
+    "servings": [{ "name": "6 pieces", "grams": 150 }],
+    "aliases": ["chicken momos"]
+  },
+  {
+    "name": "Pani Puri",
+    "category": "FastFood",
+    "nutrition": { "calories": 180, "protein": 4, "carbs": 30, "fat": 5 },
+    "servings": [{ "name": "6 pieces", "grams": 150 }],
+    "aliases": ["golgappa", "puchka"]
+  },
+  {
+    "name": "Samosa",
+    "category": "FastFood",
+    "nutrition": { "calories": 262, "protein": 6, "carbs": 30, "fat": 14 },
+    "servings": [{ "name": "1 samosa", "grams": 100 }],
+    "aliases": []
+  },
+  {
+    "name": "Pakora",
+    "category": "FastFood",
+    "nutrition": { "calories": 300, "protein": 6, "carbs": 30, "fat": 18 },
+    "servings": [{ "name": "100g", "grams": 100 }],
+    "aliases": ["bhajiya"]
+  },
+
+  {
+    "name": "Chole Bhature",
+    "category": "Prepared",
+    "nutrition": { "calories": 450, "protein": 12, "carbs": 60, "fat": 18 },
+    "servings": [{ "name": "1 plate", "grams": 350 }],
+    "aliases": []
+  },
+  {
+    "name": "Puri Chole",
+    "category": "Prepared",
+    "nutrition": { "calories": 400, "protein": 10, "carbs": 55, "fat": 15 },
+    "servings": [{ "name": "1 plate", "grams": 300 }],
+    "aliases": []
+  },
+  {
+    "name": "Kulcha Chole",
+    "category": "Prepared",
+    "nutrition": { "calories": 420, "protein": 11, "carbs": 60, "fat": 14 },
+    "servings": [{ "name": "1 plate", "grams": 320 }],
+    "aliases": ["amritsari kulcha"]
+  },
+  {
+    "name": "Chilli Potato",
+    "category": "Prepared",
+    "nutrition": { "calories": 300, "protein": 4, "carbs": 45, "fat": 12 },
+    "servings": [{ "name": "1 plate", "grams": 250 }],
+    "aliases": []
+  },
+  {
+    "name": "Honey Chilli Potato",
+    "category": "Prepared",
+    "nutrition": { "calories": 320, "protein": 4, "carbs": 50, "fat": 13 },
+    "servings": [{ "name": "1 plate", "grams": 250 }],
+    "aliases": []
+  },
+  {
+    "name": "Shawarma (Chicken)",
+    "category": "Prepared",
+    "nutrition": { "calories": 350, "protein": 20, "carbs": 30, "fat": 15 },
+    "servings": [{ "name": "1 roll", "grams": 200 }],
+    "aliases": ["shawarma"]
+  },
+  {
+    "name": "Shawarma (Beef)",
+    "category": "Prepared",
+    "nutrition": { "calories": 400, "protein": 22, "carbs": 30, "fat": 20 },
+    "servings": [{ "name": "1 roll", "grams": 200 }],
+    "aliases": []
+  },
+  {
+    "name": "Shawarma (Veg)",
+    "category": "Prepared",
+    "nutrition": { "calories": 280, "protein": 8, "carbs": 35, "fat": 10 },
+    "servings": [{ "name": "1 roll", "grams": 180 }],
+    "aliases": []
+  },
+  {
+    "name": "Hakka Noodles",
+    "category": "Prepared",
+    "nutrition": { "calories": 250, "protein": 7, "carbs": 40, "fat": 8 },
+    "servings": [{ "name": "1 plate", "grams": 250 }],
+    "aliases": []
+  },
+  {
+    "name": "Manchurian (Veg)",
+    "category": "Prepared",
+    "nutrition": { "calories": 280, "protein": 6, "carbs": 30, "fat": 14 },
+    "servings": [{ "name": "1 plate", "grams": 200 }],
+    "aliases": []
+  },
+  {
+    "name": "Manchurian (Chicken)",
+    "category": "Prepared",
+    "nutrition": { "calories": 300, "protein": 18, "carbs": 20, "fat": 16 },
+    "servings": [{ "name": "1 plate", "grams": 200 }],
+    "aliases": []
+  },
+  {
+    "name": "Pav Bhaji",
+    "category": "Prepared",
+    "nutrition": { "calories": 400, "protein": 10, "carbs": 55, "fat": 15 },
+    "servings": [{ "name": "1 plate", "grams": 300 }],
+    "aliases": []
+  },
+  {
+    "name": "Vada Pav",
+    "category": "Prepared",
+    "nutrition": { "calories": 290, "protein": 6, "carbs": 35, "fat": 14 },
+    "servings": [{ "name": "1 piece", "grams": 150 }],
+    "aliases": []
+  },
+  {
+    "name": "Dahi Puri",
+    "category": "Prepared",
+    "nutrition": { "calories": 200, "protein": 5, "carbs": 30, "fat": 6 },
+    "servings": [{ "name": "1 plate", "grams": 150 }],
+    "aliases": []
+  }
+]
