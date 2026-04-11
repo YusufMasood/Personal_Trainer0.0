@@ -1,0 +1,360 @@
+[
+    {
+    "name": "Banana",
+    "category": "Fruits",
+    "nutrition": {"calories": 89, "protein": 1.1, "carbs": 23, "fat": 0.3},
+    "servings": [{ "name": "1 banana", "grams": 118 }],
+      "aliases": ["kela"]
+    },
+    {
+      "name": "Apple",
+      "category": "Fruits",
+      "nutrition": { "calories": 52, "protein": 0.3, "carbs": 14, "fat": 0.2 },
+      "servings": [{ "name": "1 apple", "grams": 182 }],
+      "aliases": ["seb"]
+    },
+    {
+      "name": "Orange",
+      "category": "Fruits",
+      "nutrition": { "calories": 47, "protein": 0.9, "carbs": 12, "fat": 0.1 },
+      "servings": [{ "name": "1 orange", "grams": 131 }],
+      "aliases": ["santra"]
+    },
+    {
+      "name": "Grapes",
+      "category": "Fruits",
+      "nutrition": { "calories": 69, "protein": 0.7, "carbs": 18, "fat": 0.2 },
+      "servings": [{ "name": "1 cup", "grams": 150 }],
+      "aliases": ["angoor"]
+    },
+    {
+      "name": "Strawberry",
+      "category": "Fruits",
+      "nutrition": { "calories": 32, "protein": 0.7, "carbs": 8, "fat": 0.3 },
+      "servings": [{ "name": "1 cup", "grams": 152 }],
+      "aliases": []
+    },
+    {
+      "name": "Watermelon",
+      "category": "Fruits",
+      "nutrition": { "calories": 30, "protein": 0.6, "carbs": 8, "fat": 0.2 },
+      "servings": [{ "name": "1 slice", "grams": 286 }],
+      "aliases": ["tarbooj"]
+    },
+    {
+      "name": "Mango",
+      "category": "Fruits",
+      "nutrition": { "calories": 60, "protein": 0.8, "carbs": 15, "fat": 0.4 },
+      "servings": [{ "name": "1 mango", "grams": 200 }],
+      "aliases": ["aam"]
+    },
+    {
+      "name": "Pineapple",
+      "category": "Fruits",
+      "nutrition": { "calories": 50, "protein": 0.5, "carbs": 13, "fat": 0.1 },
+      "servings": [{ "name": "1 cup", "grams": 165 }],
+      "aliases": []
+    },
+    {
+      "name": "Banana",
+      "category": "Fruits",
+      "nutrition": { "calories": 89, "protein": 1.1, "carbs": 23, "fat": 0.3 },
+      "servings": [{ "name": "1 banana", "grams": 118 }],
+      "aliases": ["kela"]
+    },
+    {
+      "name": "Papaya",
+      "category": "Fruits",
+      "nutrition": { "calories": 43, "protein": 0.5, "carbs": 11, "fat": 0.3 },
+      "servings": [{ "name": "1 cup", "grams": 140 }],
+      "aliases": []
+    },
+    {
+      "name": "Guava",
+      "category": "Fruits",
+      "nutrition": { "calories": 68, "protein": 2.6, "carbs": 14, "fat": 1 },
+      "servings": [{ "name": "1 guava", "grams": 100 }],
+      "aliases": []
+    },
+    {
+      "name": "Pomegranate",
+      "category": "Fruits",
+      "nutrition": { "calories": 83, "protein": 1.7, "carbs": 19, "fat": 1.2 },
+      "servings": [{ "name": "1 cup seeds", "grams": 174 }],
+      "aliases": ["anar"]
+    },
+    {
+      "name": "Kiwi",
+      "category": "Fruits",
+      "nutrition": { "calories": 61, "protein": 1.1, "carbs": 15, "fat": 0.5 },
+      "servings": [{ "name": "1 kiwi", "grams": 75 }],
+      "aliases": []
+    },
+    {
+      "name": "Coconut",
+      "category": "Fruits",
+      "nutrition": { "calories": 354, "protein": 3.3, "carbs": 15, "fat": 33 },
+      "servings": [{ "name": "100g", "grams": 100 }],
+      "aliases": ["nariyal"]
+    },
+    {
+      "name": "Dates",
+      "category": "Fruits",
+      "nutrition": { "calories": 277, "protein": 2, "carbs": 75, "fat": 0.2 },
+      "servings": [{ "name": "2 dates", "grams": 48 }],
+      "aliases": ["khajoor"]
+    },
+    {
+      "name": "Fig",
+      "category": "Fruits",
+      "nutrition": { "calories": 74, "protein": 0.8, "carbs": 19, "fat": 0.3 },
+      "servings": [{ "name": "1 fig", "grams": 50 }],
+      "aliases": ["anjeer"]
+    },
+    {
+      "name": "Pear",
+      "category": "Fruits",
+      "nutrition": { "calories": 57, "protein": 0.4, "carbs": 15, "fat": 0.1 },
+      "servings": [{ "name": "1 pear", "grams": 178 }],
+      "aliases": []
+    },
+    {
+      "name": "Peach",
+      "category": "Fruits",
+      "nutrition": { "calories": 39, "protein": 0.9, "carbs": 10, "fat": 0.3 },
+      "servings": [{ "name": "1 peach", "grams": 150 }],
+      "aliases": []
+    },
+    {
+      "name": "Plum",
+      "category": "Fruits",
+      "nutrition": { "calories": 46, "protein": 0.7, "carbs": 11, "fat": 0.3 },
+      "servings": [{ "name": "1 plum", "grams": 66 }],
+      "aliases": []
+    },
+    {
+      "name": "Cherry",
+      "category": "Fruits",
+      "nutrition": { "calories": 50, "protein": 1, "carbs": 12, "fat": 0.3 },
+      "servings": [{ "name": "1 cup", "grams": 154 }],
+      "aliases": []
+    },
+    {
+      "name": "Blueberry",
+      "category": "Fruits",
+      "nutrition": { "calories": 57, "protein": 0.7, "carbs": 14, "fat": 0.3 },
+      "servings": [{ "name": "1 cup", "grams": 148 }],
+      "aliases": []
+    },
+    {
+      "name": "Blackberry",
+      "category": "Fruits",
+      "nutrition": { "calories": 43, "protein": 1.4, "carbs": 10, "fat": 0.5 },
+      "servings": [{ "name": "1 cup", "grams": 144 }],
+      "aliases": []
+    },
+    {
+      "name": "Raspberry",
+      "category": "Fruits",
+      "nutrition": { "calories": 52, "protein": 1.2, "carbs": 12, "fat": 0.7 },
+      "servings": [{ "name": "1 cup", "grams": 123 }],
+      "aliases": []
+    },
+    {
+      "name": "Lemon",
+      "category": "Fruits",
+      "nutrition": { "calories": 29, "protein": 1.1, "carbs": 9, "fat": 0.3 },
+      "servings": [{ "name": "1 lemon", "grams": 58 }],
+      "aliases": ["nimbu"]
+    },
+    {
+      "name": "Lime",
+      "category": "Fruits",
+      "nutrition": { "calories": 30, "protein": 0.7, "carbs": 11, "fat": 0.2 },
+      "servings": [{ "name": "1 lime", "grams": 67 }],
+      "aliases": []
+    },
+    {
+      "name": "Grapefruit",
+      "category": "Fruits",
+      "nutrition": { "calories": 42, "protein": 0.8, "carbs": 11, "fat": 0.1 },
+      "servings": [{ "name": "1/2 grapefruit", "grams": 123 }],
+      "aliases": []
+    },
+    {
+      "name": "Cantaloupe",
+      "category": "Fruits",
+      "nutrition": { "calories": 34, "protein": 0.8, "carbs": 8, "fat": 0.2 },
+      "servings": [{ "name": "1 cup", "grams": 160 }],
+      "aliases": ["kharbooja"]
+    },
+    {
+      "name": "Honeydew Melon",
+      "category": "Fruits",
+      "nutrition": { "calories": 36, "protein": 0.5, "carbs": 9, "fat": 0.1 },
+      "servings": [{ "name": "1 cup", "grams": 177 }],
+      "aliases": []
+    },
+    {
+      "name": "Apricot",
+      "category": "Fruits",
+      "nutrition": { "calories": 48, "protein": 1.4, "carbs": 11, "fat": 0.4 },
+      "servings": [{ "name": "1 apricot", "grams": 35 }],
+      "aliases": []
+    },
+    {
+      "name": "Nectarine",
+      "category": "Fruits",
+      "nutrition": { "calories": 44, "protein": 1.1, "carbs": 11, "fat": 0.3 },
+      "servings": [{ "name": "1 nectarine", "grams": 142 }],
+      "aliases": []
+    },
+    {
+      "name": "Tangerine",
+      "category": "Fruits",
+      "nutrition": { "calories": 53, "protein": 0.8, "carbs": 13, "fat": 0.3 },
+      "servings": [{ "name": "1 tangerine", "grams": 88 }],
+      "aliases": []
+    },
+    {
+      "name": "Clementine",
+      "category": "Fruits",
+      "nutrition": { "calories": 47, "protein": 0.9, "carbs": 12, "fat": 0.1 },
+      "servings": [{ "name": "1 clementine", "grams": 74 }],
+      "aliases": []
+    },
+    {
+      "name": "Cranberry",
+      "category": "Fruits",
+      "nutrition": { "calories": 46, "protein": 0.4, "carbs": 12, "fat": 0.1 },
+      "servings": [{ "name": "1 cup", "grams": 110 }],
+      "aliases": []
+    },
+    {
+      "name": "Passionfruit",
+      "category": "Fruits",
+      "nutrition": { "calories": 97, "protein": 2.2, "carbs": 23, "fat": 0.7 },
+      "servings": [{ "name": "1 fruit", "grams": 18 }],
+      "aliases": []
+    },
+    {
+      "name": "Dragonfruit",
+      "category": "Fruits",
+      "nutrition": { "calories": 60, "protein": 1.2, "carbs": 13, "fat": 0.1 },
+      "servings": [{ "name": "1 fruit", "grams": 300 }],
+      "aliases": ["pitaya"]
+    },
+    {
+      "name": "Lychee",
+      "category": "Fruits",
+      "nutrition": { "calories": 66, "protein": 0.8, "carbs": 17, "fat": 0.4 },
+      "servings": [{ "name": "10 lychee", "grams": 100 }],
+      "aliases": ["litchi"]
+    },
+    {
+      "name": "Persimmon",
+      "category": "Fruits",
+      "nutrition": { "calories": 81, "protein": 0.6, "carbs": 18, "fat": 0.2 },
+      "servings": [{ "name": "1 fruit", "grams": 168 }],
+      "aliases": []
+    },
+    {
+      "name": "Starfruit",
+      "category": "Fruits",
+      "nutrition": { "calories": 31, "protein": 1, "carbs": 7, "fat": 0.3 },
+      "servings": [{ "name": "1 fruit", "grams": 90 }],
+      "aliases": ["carambola"]
+    },
+    {
+      "name": "Mulberry",
+      "category": "Fruits",
+      "nutrition": { "calories": 43, "protein": 1.4, "carbs": 10, "fat": 0.4 },
+      "servings": [{ "name": "1 cup", "grams": 140 }],
+      "aliases": []
+    },
+    {
+      "name": "Pomelo",
+      "category": "Fruits",
+      "nutrition": { "calories": 38, "protein": 0.8, "carbs": 10, "fat": 0 },
+      "servings": [{ "name": "1 cup", "grams": 190 }],
+      "aliases": []
+    },
+    {
+      "name": "Plantain",
+      "category": "Fruits",
+      "nutrition": { "calories": 122, "protein": 1.3, "carbs": 31, "fat": 0.4 },
+      "servings": [{ "name": "1 plantain", "grams": 179 }],
+      "aliases": []
+    },
+    {
+      "name": "Jackfruit",
+      "category": "Fruits",
+      "nutrition": { "calories": 95, "protein": 1.7, "carbs": 23, "fat": 0.6 },
+      "servings": [{ "name": "1 cup", "grams": 165 }],
+      "aliases": ["kathal"]
+    },
+    {
+      "name": "Durian",
+      "category": "Fruits",
+      "nutrition": { "calories": 147, "protein": 1.5, "carbs": 27, "fat": 5 },
+      "servings": [{ "name": "1 cup", "grams": 243 }],
+      "aliases": []
+    },
+    {
+      "name": "Mangosteen",
+      "category": "Fruits",
+      "nutrition": { "calories": 73, "protein": 0.6, "carbs": 18, "fat": 0.6 },
+      "servings": [{ "name": "1 fruit", "grams": 80 }],
+      "aliases": []
+    },
+    {
+      "name": "Rambutan",
+      "category": "Fruits",
+      "nutrition": { "calories": 68, "protein": 0.9, "carbs": 16, "fat": 0.2 },
+      "servings": [{ "name": "1 fruit", "grams": 30 }],
+      "aliases": []
+    },
+    {
+      "name": "Longan",
+      "category": "Fruits",
+      "nutrition": { "calories": 60, "protein": 1.3, "carbs": 15, "fat": 0.1 },
+      "servings": [{ "name": "10 longan", "grams": 100 }],
+      "aliases": []
+    },
+    {
+      "name": "Custard Apple",
+      "category": "Fruits",
+      "nutrition": { "calories": 94, "protein": 2.1, "carbs": 24, "fat": 0.3 },
+      "servings": [{ "name": "1 fruit", "grams": 150 }],
+      "aliases": ["sitaphal"]
+    },
+    {
+      "name": "Tamarind",
+      "category": "Fruits",
+      "nutrition": { "calories": 239, "protein": 2.8, "carbs": 63, "fat": 0.6 },
+      "servings": [{ "name": "50g", "grams": 50 }],
+      "aliases": ["imli"]
+    },
+    {
+      "name": "Sapodilla",
+      "category": "Fruits",
+      "nutrition": { "calories": 83, "protein": 0.4, "carbs": 20, "fat": 1.1 },
+      "servings": [{ "name": "1 fruit", "grams": 100 }],
+      "aliases": ["chikoo"]
+    },
+    {
+      "name": "Jujube",
+      "category": "Fruits",
+      "nutrition": { "calories": 79, "protein": 1.2, "carbs": 20, "fat": 0.2 },
+      "servings": [{ "name": "100g", "grams": 100 }],
+      "aliases": ["ber"]
+    },
+    {
+      "name": "Soursop",
+      "category": "Fruits",
+      "nutrition": { "calories": 66, "protein": 1, "carbs": 16, "fat": 0.3 },
+      "servings": [{ "name": "1 cup", "grams": 150 }],
+      "aliases": []
+    }
+
+]

@@ -1,0 +1,140 @@
+[
+  {
+    "name": "Cucumber",
+    "category": "Vegetables",
+    "nutrition": { "calories": 16, "protein": 0.7, "carbs": 3.6, "fat": 0.1 },
+    "servings": [
+      { "name": "1 cucumber", "grams": 200 },
+      { "name": "100g", "grams": 100 }
+    ],
+    "aliases": ["kheera"]
+  },
+  {
+    "name": "Carrot",
+    "category": "Vegetables",
+    "nutrition": { "calories": 41, "protein": 0.9, "carbs": 10, "fat": 0.2 },
+    "servings": [
+      { "name": "1 carrot", "grams": 60 },
+      { "name": "100g", "grams": 100 }
+    ],
+    "aliases": ["gajar"]
+  },
+  {
+    "name": "Potato",
+    "category": "Vegetables",
+    "nutrition": { "calories": 77, "protein": 2, "carbs": 17, "fat": 0.1 },
+    "servings": [
+      { "name": "1 potato", "grams": 150 },
+      { "name": "100g", "grams": 100 }
+    ],
+    "aliases": ["aloo"]
+  },
+  {
+    "name": "Onion",
+    "category": "Vegetables",
+    "nutrition": { "calories": 40, "protein": 1.1, "carbs": 9, "fat": 0.1 },
+    "servings": [
+      { "name": "1 onion", "grams": 110 }
+    ],
+    "aliases": ["pyaz"]
+  },
+  {
+    "name": "Tomato",
+    "category": "Vegetables",
+    "nutrition": { "calories": 18, "protein": 0.9, "carbs": 3.9, "fat": 0.2 },
+    "servings": [
+      { "name": "1 tomato", "grams": 100 }
+    ],
+    "aliases": ["tamatar"]
+  },
+  {
+    "name": "Spinach",
+    "category": "Vegetables",
+    "nutrition": { "calories": 23, "protein": 2.9, "carbs": 3.6, "fat": 0.4 },
+    "servings": [
+      { "name": "1 cup", "grams": 100 }
+    ],
+    "aliases": ["palak"]
+  },
+  {
+    "name": "Cauliflower",
+    "category": "Vegetables",
+    "nutrition": { "calories": 25, "protein": 1.9, "carbs": 5, "fat": 0.3 },
+    "servings": [
+      { "name": "1 cup", "grams": 100 }
+    ],
+    "aliases": ["gobi"]
+  },
+  {
+    "name": "Cabbage",
+    "category": "Vegetables",
+    "nutrition": { "calories": 25, "protein": 1.3, "carbs": 6, "fat": 0.1 },
+    "servings": [
+      { "name": "1 cup", "grams": 100 }
+    ],
+    "aliases": ["patta gobi"]
+  },
+  {
+    "name": "Capsicum",
+    "category": "Vegetables",
+    "nutrition": { "calories": 20, "protein": 0.9, "carbs": 4.6, "fat": 0.2 },
+    "servings": [
+      { "name": "1 capsicum", "grams": 120 }
+    ],
+    "aliases": ["shimla mirch"]
+  },
+  {
+    "name": "Brinjal",
+    "category": "Vegetables",
+    "nutrition": { "calories": 25, "protein": 1, "carbs": 6, "fat": 0.2 },
+    "servings": [
+      { "name": "1 brinjal", "grams": 150 }
+    ],
+    "aliases": ["baingan"]
+  },
+  {
+    "name": "Bottle Gourd",
+    "category": "Vegetables",
+    "nutrition": { "calories": 14, "protein": 0.6, "carbs": 3.4, "fat": 0.1 },
+    "servings": [
+      { "name": "1 cup", "grams": 100 }
+    ],
+    "aliases": ["lauki"]
+  },
+  {
+    "name": "Bitter Gourd",
+    "category": "Vegetables",
+    "nutrition": { "calories": 17, "protein": 1, "carbs": 3.7, "fat": 0.2 },
+    "servings": [
+      { "name": "1 cup", "grams": 100 }
+    ],
+    "aliases": ["karela"]
+  },
+  {
+    "name": "Green Beans",
+    "category": "Vegetables",
+    "nutrition": { "calories": 31, "protein": 1.8, "carbs": 7, "fat": 0.1 },
+    "servings": [
+      { "name": "1 cup", "grams": 100 }
+    ],
+    "aliases": ["beans"]
+  },
+  {
+    "name": "Peas",
+    "category": "Vegetables",
+    "nutrition": { "calories": 81, "protein": 5, "carbs": 14, "fat": 0.4 },
+    "servings": [
+      { "name": "1 cup", "grams": 100 }
+    ],
+    "aliases": ["matar"]
+  },
+  {
+    "name": "Broccoli",
+    "category": "Vegetables",
+    "nutrition": { "calories": 34, "protein": 2.8, "carbs": 7, "fat": 0.4 },
+    "servings": [
+      { "name": "1 cup", "grams": 100 }
+    ],
+    "aliases": []
+  }
+]

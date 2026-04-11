@@ -1,0 +1,391 @@
+[
+  {
+    "name": "Whole Egg",
+    "category": "Protein",
+    "nutrition": { "calories": 155, "protein": 13, "carbs": 1.1, "fat": 11 },
+    "servings": [
+      { "name": "1 egg", "grams": 50 },
+      { "name": "100g", "grams": 100 }
+    ],
+    "aliases": ["egg", "anda"]
+  },
+  {
+    "name": "Egg White",
+    "category": "Protein",
+    "nutrition": { "calories": 52, "protein": 11, "carbs": 0.7, "fat": 0.2 },
+    "servings": [
+      { "name": "1 white", "grams": 33 }
+    ],
+    "aliases": ["egg white"]
+  },
+  {
+    "name": "Boiled Egg",
+    "category": "Protein",
+    "nutrition": { "calories": 155, "protein": 13, "carbs": 1.1, "fat": 11 },
+    "servings": [
+      { "name": "1 egg", "grams": 50 }
+    ],
+    "aliases": ["boiled anda"]
+  },
+  {
+    "name": "Chicken Breast",
+    "category": "Protein",
+    "nutrition": { "calories": 165, "protein": 31, "carbs": 0, "fat": 3.6 },
+    "servings": [
+      { "name": "100g", "grams": 100 }
+    ],
+    "aliases": ["chicken"]
+  },
+  {
+    "name": "Boiled Chicken",
+    "category": "Protein",
+    "nutrition": { "calories": 239, "protein": 27, "carbs": 0, "fat": 14 },
+    "servings": [
+      { "name": "100g", "grams": 100 }
+    ],
+    "aliases": ["chicken boiled"]
+  },
+  {
+    "name": "Chicken Curry",
+    "category": "Protein",
+    "nutrition": { "calories": 180, "protein": 25, "carbs": 3, "fat": 8 },
+    "servings": [
+      { "name": "1 bowl", "grams": 150 }
+    ],
+    "aliases": ["chicken gravy"]
+  },
+  {
+    "name": "Paneer",
+    "category": "Protein",
+    "nutrition": { "calories": 265, "protein": 18, "carbs": 1.2, "fat": 20 },
+    "servings": [
+      { "name": "100g", "grams": 100 }
+    ],
+    "aliases": ["cottage cheese"]
+  },
+  {
+    "name": "Low Fat Paneer",
+    "category": "Protein",
+    "nutrition": { "calories": 145, "protein": 20, "carbs": 3, "fat": 7 },
+    "servings": [
+      { "name": "100g", "grams": 100 }
+    ],
+    "aliases": ["diet paneer"]
+  },
+  {
+    "name": "Tofu",
+    "category": "Protein",
+    "nutrition": { "calories": 76, "protein": 8, "carbs": 1.9, "fat": 4.8 },
+    "servings": [
+      { "name": "100g", "grams": 100 }
+    ],
+    "aliases": ["soy paneer"]
+  },
+  {
+    "name": "Soy Chunks",
+    "category": "Protein",
+    "nutrition": { "calories": 345, "protein": 52, "carbs": 33, "fat": 0.5 },
+    "servings": [
+      { "name": "50g", "grams": 50 },
+      { "name": "100g", "grams": 100 }
+    ],
+    "aliases": ["soya chunks"]
+  },
+  {
+    "name": "Boiled Soy Chunks",
+    "category": "Protein",
+    "nutrition": { "calories": 173, "protein": 26, "carbs": 16, "fat": 0.2 },
+    "servings": [
+      { "name": "100g", "grams": 100 }
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Whey Protein",
+    "category": "Protein",
+    "nutrition": { "calories": 400, "protein": 80, "carbs": 10, "fat": 7 },
+    "servings": [
+      { "name": "1 scoop", "grams": 30 }
+    ],
+    "aliases": ["protein powder"]
+  },
+    {
+      "name": "Scrambled Egg",
+      "category": "Protein",
+      "nutrition": { "calories": 148, "protein": 10, "carbs": 1.6, "fat": 10 },
+      "servings": [
+        { "name": "1 egg scrambled", "grams": 50 }
+      ],
+      "aliases": ["scramble egg"]
+    },
+    {
+      "name": "Egg Omelette",
+      "category": "Protein",
+      "nutrition": { "calories": 154, "protein": 11, "carbs": 2, "fat": 11 },
+      "servings": [
+        { "name": "1 omelette", "grams": 60 }
+      ],
+      "aliases": ["omelette", "anda omelette"]
+    },
+    {
+      "name": "Boiled Chana",
+      "category": "Protein",
+      "nutrition": { "calories": 164, "protein": 9, "carbs": 27, "fat": 2.6 },
+      "servings": [
+        { "name": "1 bowl", "grams": 150 }
+      ],
+      "aliases": ["chana", "chickpeas"]
+    },
+    {
+      "name": "Roasted Chana",
+      "category": "Protein",
+      "nutrition": { "calories": 364, "protein": 19, "carbs": 61, "fat": 6 },
+      "servings": [
+        { "name": "50g", "grams": 50 }
+      ],
+      "aliases": ["bhuna chana"]
+    },
+    {
+      "name": "Moong Dal",
+      "category": "Protein",
+      "nutrition": { "calories": 105, "protein": 7, "carbs": 19, "fat": 0.4 },
+      "servings": [
+        { "name": "1 bowl", "grams": 150 }
+      ],
+      "aliases": ["moong"]
+    },
+    {
+      "name": "Sprouted Moong",
+      "category": "Protein",
+      "nutrition": { "calories": 30, "protein": 3, "carbs": 6, "fat": 0.2 },
+      "servings": [
+        { "name": "1 bowl", "grams": 100 }
+      ],
+      "aliases": ["moong sprouts"]
+    },
+    {
+      "name": "Boiled Rajma",
+      "category": "Protein",
+      "nutrition": { "calories": 127, "protein": 9, "carbs": 22, "fat": 0.5 },
+      "servings": [
+        { "name": "1 bowl", "grams": 150 }
+      ],
+      "aliases": ["rajma"]
+    },
+    {
+      "name": "Boiled Lentils",
+      "category": "Protein",
+      "nutrition": { "calories": 116, "protein": 9, "carbs": 20, "fat": 0.4 },
+      "servings": [
+        { "name": "1 bowl", "grams": 150 }
+      ],
+      "aliases": ["dal"]
+    },
+    {
+      "name": "Peanut",
+      "category": "Protein",
+      "nutrition": { "calories": 567, "protein": 26, "carbs": 16, "fat": 49 },
+      "servings": [
+        { "name": "50g", "grams": 50 }
+      ],
+      "aliases": ["moongfali"]
+    },
+    {
+      "name": "Boiled Peanut",
+      "category": "Protein",
+      "nutrition": { "calories": 318, "protein": 13, "carbs": 21, "fat": 22 },
+      "servings": [
+        { "name": "100g", "grams": 100 }
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Chicken Thigh",
+      "category": "Protein",
+      "nutrition": { "calories": 209, "protein": 26, "carbs": 0, "fat": 10.9 },
+      "servings": [{ "name": "100g", "grams": 100 }],
+      "aliases": []
+    },
+    {
+      "name": "Grilled Chicken",
+      "category": "Protein",
+      "nutrition": { "calories": 165, "protein": 31, "carbs": 0, "fat": 3.6 },
+      "servings": [{ "name": "100g", "grams": 100 }],
+      "aliases": ["grilled chicken breast"]
+    },
+    {
+      "name": "Fried Chicken",
+      "category": "Protein",
+      "nutrition": { "calories": 246, "protein": 25, "carbs": 8, "fat": 15 },
+      "servings": [{ "name": "100g", "grams": 100 }],
+      "aliases": []
+    },
+    {
+      "name": "Chicken Keema",
+      "category": "Protein",
+      "nutrition": { "calories": 215, "protein": 27, "carbs": 0, "fat": 12 },
+      "servings": [{ "name": "1 bowl", "grams": 150 }],
+      "aliases": []
+    },
+    {
+      "name": "Fish (Generic)",
+      "category": "Protein",
+      "nutrition": { "calories": 206, "protein": 22, "carbs": 0, "fat": 12 },
+      "servings": [{ "name": "100g", "grams": 100 }],
+      "aliases": ["fish"]
+    },
+    {
+      "name": "Rohu Fish",
+      "category": "Protein",
+      "nutrition": { "calories": 97, "protein": 17, "carbs": 0, "fat": 1.5 },
+      "servings": [{ "name": "100g", "grams": 100 }],
+      "aliases": ["rohu"]
+    },
+    {
+      "name": "Salmon",
+      "category": "Protein",
+      "nutrition": { "calories": 208, "protein": 20, "carbs": 0, "fat": 13 },
+      "servings": [{ "name": "100g", "grams": 100 }],
+      "aliases": []
+    },
+    {
+      "name": "Tuna",
+      "category": "Protein",
+      "nutrition": { "calories": 132, "protein": 28, "carbs": 0, "fat": 1 },
+      "servings": [{ "name": "100g", "grams": 100 }],
+      "aliases": []
+    },
+    {
+      "name": "Prawns",
+      "category": "Protein",
+      "nutrition": { "calories": 99, "protein": 24, "carbs": 0.2, "fat": 0.3 },
+      "servings": [{ "name": "100g", "grams": 100 }],
+      "aliases": ["shrimp"]
+    },
+    {
+      "name": "Greek Yogurt",
+      "category": "Protein",
+      "nutrition": { "calories": 59, "protein": 10, "carbs": 3.6, "fat": 0.4 },
+      "servings": [{ "name": "1 cup", "grams": 150 }],
+      "aliases": []
+    },
+    {
+      "name": "Cheese",
+      "category": "Protein",
+      "nutrition": { "calories": 402, "protein": 25, "carbs": 1.3, "fat": 33 },
+      "servings": [{ "name": "50g", "grams": 50 }],
+      "aliases": []
+    },
+    {
+      "name": "Lassi",
+      "category": "Protein",
+      "nutrition": { "calories": 60, "protein": 3, "carbs": 5, "fat": 3 },
+      "servings": [{ "name": "1 glass", "grams": 250 }],
+      "aliases": []
+    },
+    {
+      "name": "Black Chana",
+      "category": "Protein",
+      "nutrition": { "calories": 164, "protein": 9, "carbs": 27, "fat": 2.6 },
+      "servings": [{ "name": "1 bowl", "grams": 150 }],
+      "aliases": ["kala chana"]
+    },
+    {
+      "name": "Masoor Dal",
+      "category": "Protein",
+      "nutrition": { "calories": 116, "protein": 9, "carbs": 20, "fat": 0.4 },
+      "servings": [{ "name": "1 bowl", "grams": 150 }],
+      "aliases": []
+    },
+    {
+      "name": "Urad Dal",
+      "category": "Protein",
+      "nutrition": { "calories": 116, "protein": 9, "carbs": 20, "fat": 0.4 },
+      "servings": [{ "name": "1 bowl", "grams": 150 }],
+      "aliases": []
+    },
+    {
+      "name": "Chole (Chickpeas Curry)",
+      "category": "Protein",
+      "nutrition": { "calories": 180, "protein": 9, "carbs": 30, "fat": 5 },
+      "servings": [{ "name": "1 bowl", "grams": 150 }],
+      "aliases": ["chole"]
+    },
+    {
+      "name": "Kidney Beans Curry",
+      "category": "Protein",
+      "nutrition": { "calories": 170, "protein": 9, "carbs": 28, "fat": 4 },
+      "servings": [{ "name": "1 bowl", "grams": 150 }],
+      "aliases": ["rajma curry"]
+    },
+    {
+      "name": "Casein Protein",
+      "category": "Protein",
+      "nutrition": { "calories": 360, "protein": 80, "carbs": 8, "fat": 2 },
+      "servings": [{ "name": "1 scoop", "grams": 30 }],
+      "aliases": []
+    },
+  {
+    "name": "Raw Chicken Breast",
+    "category": "Protein",
+    "nutrition": { "calories": 120, "protein": 22, "carbs": 0, "fat": 2 },
+    "servings": [
+      { "name": "100g", "grams": 100 }
+    ],
+    "aliases": ["raw chicken"]
+  },
+  {
+    "name": "Raw Chicken (Whole)",
+    "category": "Protein",
+    "nutrition": { "calories": 215, "protein": 18, "carbs": 0, "fat": 15 },
+    "servings": [
+      { "name": "100g", "grams": 100 }
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Raw Mutton",
+    "category": "Protein",
+    "nutrition": { "calories": 294, "protein": 25, "carbs": 0, "fat": 21 },
+    "servings": [
+      { "name": "100g", "grams": 100 }
+    ],
+    "aliases": ["mutton raw"]
+  },
+  {
+    "name": "Raw Mutton Boneless",
+    "category": "Protein",
+    "nutrition": { "calories": 250, "protein": 26, "carbs": 0, "fat": 17 },
+    "servings": [
+      { "name": "100g", "grams": 100 }
+    ],
+    "aliases": ["boneless mutton"]
+  },
+  {
+    "name": "Raw Beef",
+    "category": "Protein",
+    "nutrition": { "calories": 250, "protein": 26, "carbs": 0, "fat": 17 },
+    "servings": [
+      { "name": "100g", "grams": 100 }
+    ],
+    "aliases": ["beef raw"]
+  },
+  {
+    "name": "Raw Beef Boneless",
+    "category": "Protein",
+    "nutrition": { "calories": 217, "protein": 26, "carbs": 0, "fat": 12 },
+    "servings": [
+      { "name": "100g", "grams": 100 }
+    ],
+    "aliases": ["boneless beef"]
+  },
+  {
+    "name": "Raw Fish",
+    "category": "Protein",
+    "nutrition": { "calories": 120, "protein": 20, "carbs": 0, "fat": 4 },
+    "servings": [
+      { "name": "100g", "grams": 100 }
+    ],
+    "aliases": ["fish raw"]
+  }
+]

@@ -1,0 +1,305 @@
+[
+  {
+    "name": "Vegetable Salad",
+    "category": "Prepared",
+    "nutrition": { "calories": 50, "protein": 2, "carbs": 10, "fat": 0.5 },
+    "servings": [
+      { "name": "1 bowl", "grams": 150 }
+    ],
+    "aliases": ["salad"]
+  },
+  {
+    "name": "Fruit Salad",
+    "category": "Prepared",
+    "nutrition": { "calories": 80, "protein": 1, "carbs": 20, "fat": 0.3 },
+    "servings": [
+      { "name": "1 bowl", "grams": 150 }
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Aloo Chokha",
+    "category": "Prepared",
+    "nutrition": { "calories": 120, "protein": 2, "carbs": 25, "fat": 1 },
+    "servings": [
+      { "name": "1 bowl", "grams": 150 }
+    ],
+    "aliases": ["chokha"]
+  },
+  {
+    "name": "Baingan Chokha",
+    "category": "Prepared",
+    "nutrition": { "calories": 90, "protein": 2, "carbs": 15, "fat": 2 },
+    "servings": [
+      { "name": "1 bowl", "grams": 150 }
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Bhindi Sabzi",
+    "category": "Prepared",
+    "nutrition": { "calories": 110, "protein": 2, "carbs": 12, "fat": 6 },
+    "servings": [
+      { "name": "1 bowl", "grams": 150 }
+    ],
+    "aliases": ["bhindi"]
+  },
+  {
+    "name": "Aloo Sabzi",
+    "category": "Prepared",
+    "nutrition": { "calories": 150, "protein": 3, "carbs": 30, "fat": 3 },
+    "servings": [
+      { "name": "1 bowl", "grams": 150 }
+    ],
+    "aliases": ["aloo"]
+  },
+  {
+    "name": "Mixed Vegetable Sabzi",
+    "category": "Prepared",
+    "nutrition": { "calories": 120, "protein": 3, "carbs": 18, "fat": 4 },
+    "servings": [
+      { "name": "1 bowl", "grams": 150 }
+    ],
+    "aliases": ["mix veg"]
+  },
+  {
+    "name": "Paneer Bhurji",
+    "category": "Prepared",
+    "nutrition": { "calories": 265, "protein": 18, "carbs": 5, "fat": 20 },
+    "servings": [
+      { "name": "1 bowl", "grams": 150 }
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Egg Bhurji",
+    "category": "Prepared",
+    "nutrition": { "calories": 155, "protein": 13, "carbs": 2, "fat": 11 },
+    "servings": [
+      { "name": "1 bowl", "grams": 120 }
+    ],
+    "aliases": []
+  },
+
+  {
+    "name": "Chicken Biryani",
+    "category": "Prepared",
+    "nutrition": { "calories": 250, "protein": 15, "carbs": 30, "fat": 8 },
+    "servings": [{ "name": "1 plate", "grams": 300 }],
+    "aliases": ["biryani"]
+  },
+  {
+    "name": "Mutton Biryani",
+    "category": "Prepared",
+    "nutrition": { "calories": 300, "protein": 18, "carbs": 28, "fat": 12 },
+    "servings": [{ "name": "1 plate", "grams": 300 }],
+    "aliases": []
+  },
+  {
+    "name": "Chicken Curry",
+    "category": "Prepared",
+    "nutrition": { "calories": 180, "protein": 25, "carbs": 3, "fat": 8 },
+    "servings": [{ "name": "1 bowl", "grams": 150 }],
+    "aliases": ["chicken gravy"]
+  },
+  {
+    "name": "Butter Chicken",
+    "category": "Prepared",
+    "nutrition": { "calories": 260, "protein": 20, "carbs": 6, "fat": 18 },
+    "servings": [{ "name": "1 bowl", "grams": 150 }],
+    "aliases": []
+  },
+  {
+    "name": "Chicken Tikka",
+    "category": "Prepared",
+    "nutrition": { "calories": 150, "protein": 27, "carbs": 2, "fat": 3 },
+    "servings": [{ "name": "5 pieces", "grams": 150 }],
+    "aliases": []
+  },
+  {
+    "name": "Chicken Kebab",
+    "category": "Prepared",
+    "nutrition": { "calories": 220, "protein": 20, "carbs": 5, "fat": 14 },
+    "servings": [{ "name": "4 pieces", "grams": 120 }],
+    "aliases": ["kabab"]
+  },
+  {
+    "name": "Chicken Fry",
+    "category": "Prepared",
+    "nutrition": { "calories": 280, "protein": 25, "carbs": 8, "fat": 18 },
+    "servings": [{ "name": "1 plate", "grams": 200 }],
+    "aliases": []
+  },
+  {
+    "name": "Chicken Keema",
+    "category": "Prepared",
+    "nutrition": { "calories": 215, "protein": 27, "carbs": 0, "fat": 12 },
+    "servings": [{ "name": "1 bowl", "grams": 150 }],
+    "aliases": []
+  },
+  {
+    "name": "Mutton Curry",
+    "category": "Prepared",
+    "nutrition": { "calories": 294, "protein": 25, "carbs": 2, "fat": 21 },
+    "servings": [{ "name": "1 bowl", "grams": 150 }],
+    "aliases": []
+  },
+  {
+    "name": "Mutton Nihari",
+    "category": "Prepared",
+    "nutrition": { "calories": 320, "protein": 20, "carbs": 5, "fat": 25 },
+    "servings": [{ "name": "1 bowl", "grams": 200 }],
+    "aliases": ["nihari"]
+  },
+  {
+    "name": "Beef Curry",
+    "category": "Prepared",
+    "nutrition": { "calories": 250, "protein": 26, "carbs": 2, "fat": 17 },
+    "servings": [{ "name": "1 bowl", "grams": 150 }],
+    "aliases": []
+  },
+  {
+    "name": "Seekh Kebab",
+    "category": "Prepared",
+    "nutrition": { "calories": 280, "protein": 22, "carbs": 4, "fat": 20 },
+    "servings": [{ "name": "3 pieces", "grams": 120 }],
+    "aliases": []
+  },
+  {
+    "name": "Shami Kebab",
+    "category": "Prepared",
+    "nutrition": { "calories": 250, "protein": 18, "carbs": 6, "fat": 18 },
+    "servings": [{ "name": "3 pieces", "grams": 120 }],
+    "aliases": []
+  },
+  {
+    "name": "Paneer Butter Masala",
+    "category": "Prepared",
+    "nutrition": { "calories": 300, "protein": 12, "carbs": 8, "fat": 25 },
+    "servings": [{ "name": "1 bowl", "grams": 150 }],
+    "aliases": []
+  },
+  {
+    "name": "Paneer Tikka",
+    "category": "Prepared",
+    "nutrition": { "calories": 265, "protein": 18, "carbs": 5, "fat": 20 },
+    "servings": [{ "name": "5 pieces", "grams": 150 }],
+    "aliases": []
+  },
+  {
+    "name": "Palak Paneer",
+    "category": "Prepared",
+    "nutrition": { "calories": 200, "protein": 11, "carbs": 6, "fat": 15 },
+    "servings": [{ "name": "1 bowl", "grams": 150 }],
+    "aliases": []
+  },
+  {
+    "name": "Chole",
+    "category": "Prepared",
+    "nutrition": { "calories": 180, "protein": 9, "carbs": 30, "fat": 5 },
+    "servings": [{ "name": "1 bowl", "grams": 150 }],
+    "aliases": ["chole masala"]
+  },
+  {
+    "name": "Rajma Curry",
+    "category": "Prepared",
+    "nutrition": { "calories": 170, "protein": 9, "carbs": 28, "fat": 4 },
+    "servings": [{ "name": "1 bowl", "grams": 150 }],
+    "aliases": []
+  },
+  {
+    "name": "Dal Tadka",
+    "category": "Prepared",
+    "nutrition": { "calories": 140, "protein": 7, "carbs": 20, "fat": 4 },
+    "servings": [{ "name": "1 bowl", "grams": 150 }],
+    "aliases": []
+  },
+  {
+    "name": "Vegetable Sabzi",
+    "category": "Prepared",
+    "nutrition": { "calories": 120, "protein": 3, "carbs": 18, "fat": 4 },
+    "servings": [{ "name": "1 bowl", "grams": 150 }],
+    "aliases": ["sabzi"]
+  },
+  {
+    "name": "Bhindi Sabzi",
+    "category": "Prepared",
+    "nutrition": { "calories": 110, "protein": 2, "carbs": 12, "fat": 6 },
+    "servings": [{ "name": "1 bowl", "grams": 150 }],
+    "aliases": []
+  },
+  {
+    "name": "Aloo Gobi",
+    "category": "Prepared",
+    "nutrition": { "calories": 130, "protein": 3, "carbs": 22, "fat": 4 },
+    "servings": [{ "name": "1 bowl", "grams": 150 }],
+    "aliases": []
+  },
+  {
+    "name": "Mix Veg Curry",
+    "category": "Prepared",
+    "nutrition": { "calories": 140, "protein": 4, "carbs": 20, "fat": 5 },
+    "servings": [{ "name": "1 bowl", "grams": 150 }],
+    "aliases": []
+  },
+  {
+    "name": "Vegetable Salad",
+    "category": "Prepared",
+    "nutrition": { "calories": 50, "protein": 2, "carbs": 10, "fat": 0.5 },
+    "servings": [{ "name": "1 bowl", "grams": 150 }],
+    "aliases": ["salad"]
+  },
+
+  { "name": "Hyderabadi Biryani", "category": "Prepared", "nutrition": { "calories": 270, "protein": 15, "carbs": 32, "fat": 9 }, "servings": [{ "name": "1 plate", "grams": 300 }], "aliases": [] },
+  { "name": "Kolkata Biryani", "category": "Prepared", "nutrition": { "calories": 260, "protein": 14, "carbs": 35, "fat": 8 }, "servings": [{ "name": "1 plate", "grams": 300 }], "aliases": [] },
+  { "name": "Lucknowi Biryani", "category": "Prepared", "nutrition": { "calories": 265, "protein": 15, "carbs": 30, "fat": 9 }, "servings": [{ "name": "1 plate", "grams": 300 }], "aliases": ["awadhi biryani"] },
+  { "name": "Arabian Biryani", "category": "Prepared", "nutrition": { "calories": 280, "protein": 16, "carbs": 33, "fat": 10 }, "servings": [{ "name": "1 plate", "grams": 300 }], "aliases": ["mandi", "kabsa"] },
+  { "name": "Sindhi Biryani", "category": "Prepared", "nutrition": { "calories": 275, "protein": 15, "carbs": 32, "fat": 10 }, "servings": [{ "name": "1 plate", "grams": 300 }], "aliases": [] },
+
+  { "name": "Egg Biryani", "category": "Prepared", "nutrition": { "calories": 250, "protein": 12, "carbs": 30, "fat": 8 }, "servings": [{ "name": "1 plate", "grams": 300 }], "aliases": [] },
+  { "name": "Paneer Biryani", "category": "Prepared", "nutrition": { "calories": 260, "protein": 10, "carbs": 32, "fat": 10 }, "servings": [{ "name": "1 plate", "grams": 300 }], "aliases": [] },
+  { "name": "Veg Biryani", "category": "Prepared", "nutrition": { "calories": 230, "protein": 6, "carbs": 35, "fat": 7 }, "servings": [{ "name": "1 plate", "grams": 300 }], "aliases": [] },
+
+  { "name": "Chicken Pulao", "category": "Prepared", "nutrition": { "calories": 240, "protein": 14, "carbs": 30, "fat": 8 }, "servings": [{ "name": "1 plate", "grams": 300 }], "aliases": [] },
+  { "name": "Peas Pulao", "category": "Prepared", "nutrition": { "calories": 210, "protein": 6, "carbs": 35, "fat": 5 }, "servings": [{ "name": "1 plate", "grams": 300 }], "aliases": [] },
+  { "name": "Kashmiri Pulao", "category": "Prepared", "nutrition": { "calories": 260, "protein": 6, "carbs": 40, "fat": 7 }, "servings": [{ "name": "1 plate", "grams": 300 }], "aliases": [] },
+  { "name": "Jeera Rice", "category": "Prepared", "nutrition": { "calories": 180, "protein": 4, "carbs": 30, "fat": 4 }, "servings": [{ "name": "1 bowl", "grams": 200 }], "aliases": [] },
+  { "name": "Khichdi", "category": "Prepared", "nutrition": { "calories": 140, "protein": 6, "carbs": 25, "fat": 2 }, "servings": [{ "name": "1 bowl", "grams": 200 }], "aliases": [] },
+
+  { "name": "Butter Paneer", "category": "Prepared", "nutrition": { "calories": 300, "protein": 12, "carbs": 8, "fat": 25 }, "servings": [{ "name": "1 bowl", "grams": 150 }], "aliases": ["paneer makhani"] },
+  { "name": "Shahi Paneer", "category": "Prepared", "nutrition": { "calories": 310, "protein": 11, "carbs": 10, "fat": 26 }, "servings": [{ "name": "1 bowl", "grams": 150 }], "aliases": [] },
+  { "name": "Kadai Paneer", "category": "Prepared", "nutrition": { "calories": 280, "protein": 13, "carbs": 8, "fat": 22 }, "servings": [{ "name": "1 bowl", "grams": 150 }], "aliases": [] },
+  { "name": "Matar Paneer", "category": "Prepared", "nutrition": { "calories": 250, "protein": 11, "carbs": 12, "fat": 18 }, "servings": [{ "name": "1 bowl", "grams": 150 }], "aliases": [] },
+  { "name": "Paneer Tikka Masala", "category": "Prepared", "nutrition": { "calories": 290, "protein": 14, "carbs": 10, "fat": 22 }, "servings": [{ "name": "1 bowl", "grams": 150 }], "aliases": [] },
+
+  { "name": "Mutton Korma", "category": "Prepared", "nutrition": { "calories": 300, "protein": 22, "carbs": 5, "fat": 22 }, "servings": [{ "name": "1 bowl", "grams": 150 }], "aliases": [] },
+  { "name": "Mutton Rogan Josh", "category": "Prepared", "nutrition": { "calories": 280, "protein": 25, "carbs": 3, "fat": 20 }, "servings": [{ "name": "1 bowl", "grams": 150 }], "aliases": [] },
+  { "name": "Palak Mutton", "category": "Prepared", "nutrition": { "calories": 260, "protein": 22, "carbs": 6, "fat": 18 }, "servings": [{ "name": "1 bowl", "grams": 150 }], "aliases": ["saag gosht"] },
+  { "name": "Haleem", "category": "Prepared", "nutrition": { "calories": 350, "protein": 20, "carbs": 25, "fat": 18 }, "servings": [{ "name": "1 bowl", "grams": 200 }], "aliases": [] },
+  { "name": "Beef Bhuna", "category": "Prepared", "nutrition": { "calories": 280, "protein": 25, "carbs": 3, "fat": 20 }, "servings": [{ "name": "1 bowl", "grams": 150 }], "aliases": [] },
+
+  { "name": "Chicken Tikka Masala", "category": "Prepared", "nutrition": { "calories": 260, "protein": 20, "carbs": 6, "fat": 18 }, "servings": [{ "name": "1 bowl", "grams": 150 }], "aliases": [] },
+  { "name": "Chicken Korma", "category": "Prepared", "nutrition": { "calories": 270, "protein": 18, "carbs": 5, "fat": 20 }, "servings": [{ "name": "1 bowl", "grams": 150 }], "aliases": [] },
+  { "name": "Kadai Chicken", "category": "Prepared", "nutrition": { "calories": 250, "protein": 22, "carbs": 5, "fat": 16 }, "servings": [{ "name": "1 bowl", "grams": 150 }], "aliases": [] },
+  { "name": "Chicken Chettinad", "category": "Prepared", "nutrition": { "calories": 260, "protein": 23, "carbs": 4, "fat": 18 }, "servings": [{ "name": "1 bowl", "grams": 150 }], "aliases": [] },
+
+  { "name": "Tandoori Chicken", "category": "Prepared", "nutrition": { "calories": 220, "protein": 30, "carbs": 2, "fat": 10 }, "servings": [{ "name": "2 pieces", "grams": 200 }], "aliases": [] },
+  { "name": "Chicken Seekh Kebab", "category": "Prepared", "nutrition": { "calories": 260, "protein": 22, "carbs": 4, "fat": 18 }, "servings": [{ "name": "3 pieces", "grams": 120 }], "aliases": [] },
+  { "name": "Mutton Seekh Kebab", "category": "Prepared", "nutrition": { "calories": 280, "protein": 22, "carbs": 4, "fat": 20 }, "servings": [{ "name": "3 pieces", "grams": 120 }], "aliases": [] },
+
+  { "name": "Aloo Gobhi", "category": "Prepared", "nutrition": { "calories": 130, "protein": 3, "carbs": 22, "fat": 4 }, "servings": [{ "name": "1 bowl", "grams": 150 }], "aliases": [] },
+  { "name": "Dum Aloo", "category": "Prepared", "nutrition": { "calories": 200, "protein": 4, "carbs": 30, "fat": 8 }, "servings": [{ "name": "1 bowl", "grams": 150 }], "aliases": [] },
+  { "name": "Baingan Bharta", "category": "Prepared", "nutrition": { "calories": 120, "protein": 3, "carbs": 15, "fat": 5 }, "servings": [{ "name": "1 bowl", "grams": 150 }], "aliases": [] },
+
+  { "name": "Dal Makhani", "category": "Prepared", "nutrition": { "calories": 220, "protein": 9, "carbs": 20, "fat": 12 }, "servings": [{ "name": "1 bowl", "grams": 150 }], "aliases": [] },
+  { "name": "Dal Fry", "category": "Prepared", "nutrition": { "calories": 150, "protein": 7, "carbs": 22, "fat": 4 }, "servings": [{ "name": "1 bowl", "grams": 150 }], "aliases": [] },
+
+  { "name": "Masala Dosa", "category": "Prepared", "nutrition": { "calories": 250, "protein": 6, "carbs": 35, "fat": 10 }, "servings": [{ "name": "1 dosa", "grams": 150 }], "aliases": [] },
+  { "name": "Idli", "category": "Prepared", "nutrition": { "calories": 58, "protein": 2, "carbs": 12, "fat": 0.4 }, "servings": [{ "name": "2 idli", "grams": 100 }], "aliases": [] },
+  { "name": "Sambar", "category": "Prepared", "nutrition": { "calories": 70, "protein": 3, "carbs": 10, "fat": 2 }, "servings": [{ "name": "1 bowl", "grams": 150 }], "aliases": [] },
+
+  { "name": "Butter Naan", "category": "Prepared", "nutrition": { "calories": 300, "protein": 8, "carbs": 50, "fat": 10 }, "servings": [{ "name": "1 naan", "grams": 120 }], "aliases": [] },
+  { "name": "Aloo Paratha", "category": "Prepared", "nutrition": { "calories": 250, "protein": 6, "carbs": 40, "fat": 8 }, "servings": [{ "name": "1 paratha", "grams": 120 }], "aliases": [] },
+  { "name": "Paneer Paratha", "category": "Prepared", "nutrition": { "calories": 300, "protein": 10, "carbs": 35, "fat": 15 }, "servings": [{ "name": "1 paratha", "grams": 120 }], "aliases": [] }
+
+]

@@ -1,0 +1,27 @@
+[
+  { "name": "Gulab Jamun", "category": "Treats", "nutrition": { "calories": 300, "protein": 4, "carbs": 50, "fat": 10 }, "servings": [{ "name": "2 pieces", "grams": 100 }], "aliases": [] },
+  { "name": "Rasgulla", "category": "Treats", "nutrition": { "calories": 180, "protein": 4, "carbs": 40, "fat": 2 }, "servings": [{ "name": "2 pieces", "grams": 100 }], "aliases": [] },
+  { "name": "Jalebi", "category": "Treats", "nutrition": { "calories": 400, "protein": 3, "carbs": 60, "fat": 18 }, "servings": [{ "name": "100g", "grams": 100 }], "aliases": [] },
+  { "name": "Kaju Katli", "category": "Treats", "nutrition": { "calories": 450, "protein": 10, "carbs": 50, "fat": 25 }, "servings": [{ "name": "2 pieces", "grams": 50 }], "aliases": [] },
+  { "name": "Ladoo", "category": "Treats", "nutrition": { "calories": 350, "protein": 6, "carbs": 45, "fat": 15 }, "servings": [{ "name": "1 ladoo", "grams": 40 }], "aliases": [] },
+  { "name": "Barfi", "category": "Treats", "nutrition": { "calories": 420, "protein": 8, "carbs": 50, "fat": 20 }, "servings": [{ "name": "2 pieces", "grams": 60 }], "aliases": [] },
+  { "name": "Halwa", "category": "Treats", "nutrition": { "calories": 350, "protein": 5, "carbs": 50, "fat": 15 }, "servings": [{ "name": "1 bowl", "grams": 150 }], "aliases": [] },
+  { "name": "Kheer", "category": "Treats", "nutrition": { "calories": 180, "protein": 6, "carbs": 30, "fat": 5 }, "servings": [{ "name": "1 bowl", "grams": 150 }], "aliases": [] },
+  { "name": "Rasmalai", "category": "Treats", "nutrition": { "calories": 250, "protein": 6, "carbs": 30, "fat": 10 }, "servings": [{ "name": "2 pieces", "grams": 100 }], "aliases": [] },
+
+  { "name": "Chocolate Cake", "category": "Treats", "nutrition": { "calories": 350, "protein": 5, "carbs": 50, "fat": 15 }, "servings": [{ "name": "1 slice", "grams": 100 }], "aliases": [] },
+  { "name": "Vanilla Cake", "category": "Treats", "nutrition": { "calories": 300, "protein": 4, "carbs": 45, "fat": 12 }, "servings": [{ "name": "1 slice", "grams": 100 }], "aliases": [] },
+  { "name": "Brownie", "category": "Treats", "nutrition": { "calories": 400, "protein": 6, "carbs": 50, "fat": 20 }, "servings": [{ "name": "1 piece", "grams": 80 }], "aliases": [] },
+
+  { "name": "Vanilla Ice Cream", "category": "Treats", "nutrition": { "calories": 207, "protein": 3.5, "carbs": 24, "fat": 11 }, "servings": [{ "name": "1 scoop", "grams": 66 }], "aliases": [] },
+  { "name": "Chocolate Ice Cream", "category": "Treats", "nutrition": { "calories": 216, "protein": 3.8, "carbs": 25, "fat": 11 }, "servings": [{ "name": "1 scoop", "grams": 66 }], "aliases": [] },
+  { "name": "Kulfi", "category": "Treats", "nutrition": { "calories": 250, "protein": 5, "carbs": 30, "fat": 12 }, "servings": [{ "name": "1 kulfi", "grams": 100 }], "aliases": [] },
+
+  { "name": "Cold Drink", "category": "Treats", "nutrition": { "calories": 42, "protein": 0, "carbs": 10, "fat": 0 }, "servings": [{ "name": "1 glass", "grams": 250 }], "aliases": ["soft drink"] },
+  { "name": "Fruit Juice", "category": "Treats", "nutrition": { "calories": 45, "protein": 0.5, "carbs": 11, "fat": 0.1 }, "servings": [{ "name": "1 glass", "grams": 250 }], "aliases": [] },
+  { "name": "Milkshake", "category": "Treats", "nutrition": { "calories": 150, "protein": 5, "carbs": 20, "fat": 5 }, "servings": [{ "name": "1 glass", "grams": 300 }], "aliases": [] },
+  { "name": "Lassi", "category": "Treats", "nutrition": { "calories": 120, "protein": 4, "carbs": 15, "fat": 4 }, "servings": [{ "name": "1 glass", "grams": 250 }], "aliases": [] },
+  { "name": "Buttermilk", "category": "Treats", "nutrition": { "calories": 40, "protein": 3, "carbs": 5, "fat": 1 }, "servings": [{ "name": "1 glass", "grams": 250 }], "aliases": ["chaas"] },
+  { "name": "Tea", "category": "Treats", "nutrition": { "calories": 40, "protein": 1, "carbs": 6, "fat": 1 }, "servings": [{ "name": "1 cup", "grams": 150 }], "aliases": ["chai"] },
+  { "name": "Coffee", "category": "Treats", "nutrition": { "calories": 60, "protein": 2, "carbs": 8, "fat": 2 }, "servings": [{ "name": "1 cup", "grams": 150 }], "aliases": [] }
+]
