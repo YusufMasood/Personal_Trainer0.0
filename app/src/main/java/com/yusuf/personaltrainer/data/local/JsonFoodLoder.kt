@@ -7,44 +7,57 @@ import com.yusuf.personaltrainer.data.local.entity.FoodEntity
 
 object JsonFoodLoader {
 
+    private val files = listOf(
+        "fruits.json",
+        "protein.json",
+        "grains.json",
+        "vegetables.json",
+        "dairy.json",
+        "prepared_food.json",
+        "treats.json",
+        "fast_food.json"
+    )
+
     fun loadFoodsFromJson(context: Context): List<FoodEntity> {
 
-        val inputStream = context.assets.open("foods_final.json")
-        val jsonString = inputStream.bufferedReader().use { it.readText() }
+        val allFoods = mutableListOf<FoodEntity>()
 
-        Log.d("JSON_DEBUG", "JSON length = ${jsonString.length}")
+        for (fileName in files) {
 
-        val jsonArray = JsonParser.parseString(jsonString).asJsonArray
-        val foods = mutableListOf<FoodEntity>()
+            val jsonString = context.assets.open(fileName)
+                .bufferedReader()
+                .use { it.readText() }
 
-        for (element in jsonArray) {
+            val jsonArray = JsonParser.parseString(jsonString).asJsonArray
 
-            val obj = element.asJsonObject
+            for (element in jsonArray) {
+                try {
+                    val obj = element.asJsonObject
 
-            if (!obj.has("foodId") || !obj.has("name")) continue
+                    val name = obj["name"].asString
+                    val category = obj["category"].asString
 
-            try {
+                    val nutrition = obj["nutrition"].asJsonObject
 
-                val food = FoodEntity(
-                    foodId = obj["foodId"].asLong,
-                    name = obj["name"].asString,
-                    category = null, // since JSON doesn't have it
-                    caloriesPer100g = obj["caloriesPer100g"].asDouble,
-                    proteinPer100g = obj["proteinPer100g"].asDouble,
-                    carbsPer100g = obj["carbsPer100g"].asDouble,
-                    fatPer100g = obj["fatPer100g"].asDouble,
-                    fiberPer100g = obj["fiberPer100g"].asDouble
-                )
+                    val food = FoodEntity(
+                        name = name,
+                        category = category,
+                        calories = nutrition["calories"].asDouble,
+                        protein = nutrition["protein"].asDouble,
+                        carbs = nutrition["carbs"].asDouble,
+                        fat = nutrition["fat"].asDouble
+                    )
 
-                foods.add(food)
+                    allFoods.add(food)
 
-            } catch (e: Exception) {
-                Log.d("JSON_DEBUG", "Skipped item due to error")
+                } catch (e: Exception) {
+                    Log.d("JSON_DEBUG", "Skipped item in $fileName")
+                }
             }
         }
 
-        Log.d("JSON_DEBUG", "Parsed foods manually = ${foods.size}")
+        Log.d("JSON_DEBUG", "Total foods loaded = ${allFoods.size}")
 
-        return foods
+        return allFoods
     }
 }

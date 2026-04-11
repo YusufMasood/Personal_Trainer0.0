@@ -18,6 +18,19 @@ interface FoodDao {
     @Query("SELECT * FROM foods")
     suspend fun getAllFoods(): List<FoodEntity>
 
-    @Query("SELECT * FROM foods WHERE name LIKE '%' || :query || '%'")
+    @Query("""SELECT * FROM foods WHERE LOWER(name) LIKE '%' || LOWER(:query) || '%' OR LOWER(category) LIKE '%' || LOWER(:query) || '%'
+    ORDER BY 
+        CASE 
+            WHEN name LIKE :query || '%' THEN 1   -- starts with
+            WHEN name LIKE '%' || :query || '%' THEN 2
+            WHEN category LIKE '%' || :query || '%' THEN 3
+            ELSE 4
+        END, name ASC LIMIT 50""")
     suspend fun searchFoods(query: String): List<FoodEntity>
+
+    @Query("SELECT * FROM foods WHERE category = :category")
+    suspend fun getFoodsByCategory(category: String): List<FoodEntity>
+
+    @Query("""SELECT * FROM foods WHERE name LIKE :query || '%'""")
+    suspend fun searchStartsWith(query: String): List<FoodEntity>
 }

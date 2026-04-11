@@ -18,7 +18,7 @@ import com.yusuf.personaltrainer.data.local.dao.MealEntryDao
               DailyNutritionEntity::class,
               FoodEntity::class,
         MealEntryEntity::class],
-    version = 7,
+    version = 8,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {

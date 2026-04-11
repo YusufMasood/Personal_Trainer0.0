@@ -13,6 +13,7 @@ class FoodRepository(
     }
 
     suspend fun searchFoods(query: String): List<FoodEntity> {
-        return foodDao.searchFoods(query)
+        if (query.isBlank()) return emptyList()
+        return foodDao.searchFoods(query.trim())
     }
 }
