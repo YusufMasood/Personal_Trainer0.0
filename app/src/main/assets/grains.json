@@ -119,5 +119,42 @@
       { "name": "1 corn", "grams": 100 }
     ],
     "aliases": ["makka"]
+  },
+
+  {
+    "name": "White Bread",
+    "category": "Grains",
+    "nutrition": { "calories": 265, "protein": 9, "carbs": 49, "fat": 3.2 },
+    "servings": [
+      { "name": "1 slice", "grams": 25 }
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Multigrain Bread",
+    "category": "Grains",
+    "nutrition": { "calories": 250, "protein": 12, "carbs": 40, "fat": 4 },
+    "servings": [
+      { "name": "1 slice", "grams": 25 }
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Whole Wheat Bread",
+    "category": "Grains",
+    "nutrition": { "calories": 247, "protein": 13, "carbs": 41, "fat": 4.2 },
+    "servings": [
+      { "name": "1 slice", "grams": 25 }
+    ],
+    "aliases": ["brown bread"]
+  },
+  {
+    "name": "Milk Bread",
+    "category": "Grains",
+    "nutrition": { "calories": 270, "protein": 8, "carbs": 50, "fat": 4 },
+    "servings": [
+      { "name": "1 slice", "grams": 25 }
+    ],
+    "aliases": []
   }
 ]
