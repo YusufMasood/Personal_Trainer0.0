@@ -14,5 +14,7 @@ data class FoodEntity(
     val calories: Double,
     val protein: Double,
     val carbs: Double,
-    val fat: Double
+    val fat: Double,
+    val servingName: String,
+    val gramsPerServing: Double
 )

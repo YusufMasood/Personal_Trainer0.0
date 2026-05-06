@@ -26,6 +26,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+//import com.yusuf.personaltrainer.ui.components.AddFoodCard
 
 
 @Composable
@@ -219,5 +220,5 @@ fun AddFoodCard(onAddFood : () -> Unit){
 @Preview
 @Composable
 fun showFoodCrad(){
-    AddFoodCard({})
+   // AddFoodCard({})
 }

@@ -56,13 +56,6 @@
       "aliases": []
     },
     {
-      "name": "Banana",
-      "category": "Fruits",
-      "nutrition": { "calories": 89, "protein": 1.1, "carbs": 23, "fat": 0.3 },
-      "servings": [{ "name": "1 banana", "grams": 118 }],
-      "aliases": ["kela"]
-    },
-    {
       "name": "Papaya",
       "category": "Fruits",
       "nutrition": { "calories": 43, "protein": 0.5, "carbs": 11, "fat": 0.3 },

@@ -130,13 +130,6 @@ fun loginScreen(onGoHome: () -> Unit = {} , sendOtp: (String, String) -> Unit ){
         Spacer(modifier = Modifier.height(25.dp))
 
 
-        Text(
-            text = "Welcome", fontWeight = FontWeight.Bold, fontSize = 30.sp,
-            modifier = Modifier
-                .padding(12.dp)
-                .align(Alignment.Start)
-        )
-
 
 
         //Image

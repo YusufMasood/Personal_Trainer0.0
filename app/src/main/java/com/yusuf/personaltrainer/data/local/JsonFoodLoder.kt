@@ -39,19 +39,28 @@ object JsonFoodLoader {
 
                     val nutrition = obj["nutrition"].asJsonObject
 
+                    val servingsArray = obj["servings"]?.asJsonArray
+
+                    val servingObj = servingsArray?.firstOrNull()?.asJsonObject
+
+                    val servingName = servingObj?.get("name")?.asString ?: "100g"
+                    val gramsPerServing = servingObj?.get("grams")?.asDouble ?: 100.0
+
                     val food = FoodEntity(
                         name = name,
                         category = category,
                         calories = nutrition["calories"].asDouble,
                         protein = nutrition["protein"].asDouble,
                         carbs = nutrition["carbs"].asDouble,
-                        fat = nutrition["fat"].asDouble
+                        fat = nutrition["fat"].asDouble,
+                        servingName = servingName,
+                        gramsPerServing = gramsPerServing
                     )
 
                     allFoods.add(food)
 
                 } catch (e: Exception) {
-                    Log.d("JSON_DEBUG", "Skipped item in $fileName")
+                    Log.d("JSON_DEBUG", "Skipped item in $fileName: ${e.message}")
                 }
             }
         }

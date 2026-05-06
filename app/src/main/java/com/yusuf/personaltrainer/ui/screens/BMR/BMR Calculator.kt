@@ -25,26 +25,28 @@ fun BmrScreen() {
     var age by remember { mutableStateOf("") }
 
     var expanded by remember { mutableStateOf(false) }
-    var activityLevel by remember { mutableStateOf("Item 1") }
+    var activityLevel by remember { mutableStateOf("Moderate") }
 
     var gender by remember { mutableStateOf("Male") }
 
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFF7F2EF))
+            .background(Color(0xFFF6F6F6))
             .padding(top = 24.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
+        Spacer(modifier = Modifier.height(25.dp))
+
         // Title
         Text(
             text = "Calculate BMR",
-            fontSize = 26.sp,
+            fontSize = 30.sp,
             fontWeight = FontWeight.Bold
         )
 
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(30.dp))
 
         // Card Container
         Card(
@@ -57,7 +59,7 @@ fun BmrScreen() {
 
             Column(
                 modifier = Modifier
-                    .background(Color(0xFFBDBDBD))
+                    .background(Color(0xFF808080))
                     .padding(16.dp)
             ) {
 
@@ -164,14 +166,48 @@ fun BmrScreen() {
                         onClick = { gender = "Female" }
                     )
                     Text("Female")
+
+
+                    Spacer(modifier = Modifier.width(24.dp))
+
+                    RadioButton(
+                        selected = gender == "Mentally sick",
+                        onClick = { gender = "Mentally sick"}
+                    )
+                    Text("Mentally sick")
+
                 }
 
-                Spacer(modifier = Modifier.height(20.dp))
+                Spacer(modifier = Modifier.height(80.dp))
 
                 // Calculate Button
                 Button(
                     onClick = {
-                        // TODO: BMR calculation logic
+
+                        val heightCm = ((heightFeet.toDoubleOrNull() ?: 0.0) * 30.48) +
+                                ((heightInch.toDoubleOrNull() ?: 0.0) * 2.54)
+
+                        val weightKg = weight.toDoubleOrNull() ?: 0.0
+                        val ageVal = age.toIntOrNull() ?: 0
+
+                        val bmr = when (gender) {
+                            "Male" -> (10 * weightKg) + (6.25 * heightCm) - (5 * ageVal) + 5
+                            "Female" -> (10 * weightKg) + (6.25 * heightCm) - (5 * ageVal) - 161
+                            else -> 0.0
+                        }
+
+                        val activityMultiplier = when (activityLevel) {
+                            "Sedentary" -> 1.2
+                            "Light" -> 1.375
+                            "Moderate" -> 1.55
+                            "Active!" -> 1.725
+                            else -> 1.2
+                        }
+
+                        val tdee = bmr * activityMultiplier
+
+                        println("BMR: $bmr")
+                        println("TDEE (Calories): $tdee")
                     },
                     modifier = Modifier
                         .fillMaxWidth()
@@ -182,12 +218,13 @@ fun BmrScreen() {
                     )
                 ) {
                     Text(
-                        text = "CALCULATE",
+                        text = "CALCULATE 😬",
                         color = Color.White,
                         fontSize = 16.sp,
                         fontWeight = FontWeight.Bold
                     )
                 }
+
             }
         }
     }

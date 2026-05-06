@@ -3,10 +3,8 @@ package com.yusuf.personaltrainer.ui.screens.home
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material3.Button
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ModalNavigationDrawer
-import androidx.compose.material3.Text
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -19,7 +17,6 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.*
 import com.yusuf.personaltrainer.navigation.Routes
 import com.yusuf.personaltrainer.ui.components.*
-import com.yusuf.personaltrainer.ui.screens.Tools.ToolsScreen
 import com.yusuf.personaltrainer.ui.viewModel.UserProfileViewModel
 import kotlinx.coroutines.launch
 
